@@ -2,6 +2,7 @@
 export const lessonContent = {
   "sets-intro": {
     title: "What is a Set?",
+    description: "Introduction to sets and their basic properties",
     content: `
       <h2>📖 Definition: Set</h2>
       <p>A set is an unordered collection of distinct objects. The objects in a set are called its elements or members.</p>
@@ -33,10 +34,37 @@ export const lessonContent = {
           <li>|A| = 5 ✓</li>
         </ul>
       </div>
-    `
+    `,
+    practiceProblems: [
+      {
+        problem: "Define what a set is in your own words.",
+        solution: "A set is an unordered collection of distinct objects. Elements are the objects in the set."
+      },
+      {
+        problem: "What does the notation x ∈ A mean?",
+        solution: "It means 'x is an element of set A' or 'x belongs to set A'."
+      },
+      {
+        problem: "If A = {1, 2, 3}, is 2 ∈ A? Is 5 ∈ A?",
+        solution: "Yes, 2 ∈ A. No, 5 ∉ A (5 is not in set A)."
+      },
+      {
+        problem: "What is the cardinality of the set {a, b, c}?",
+        solution: "The cardinality is |{a, b, c}| = 3, meaning there are 3 elements in the set."
+      },
+      {
+        problem: "List the set of all vowels in English.",
+        solution: "{a, e, i, o, u}"
+      },
+      {
+        problem: "Is {1, 2, 2, 3} a valid set notation? Why or why not?",
+        solution: "No, because sets contain distinct elements. The proper notation is {1, 2, 3}."
+      }
+    ]
   },
   "set-operations": {
     title: "Set Operations",
+    description: "Union, intersection, difference, and complement",
     content: `
       <h2>🔧 Set Operations</h2>
       <p>Sets can be combined and manipulated using various operations. These operations are fundamental to working with collections of data in computer science.</p>
@@ -78,10 +106,37 @@ export const lessonContent = {
           <li><strong>Identity:</strong> A ∪ ∅ = A, A ∩ U = A</li>
         </ul>
       </div>
-    `
+    `,
+    practiceProblems: [
+      {
+        problem: "Given sets A = {1, 2, 3} and B = {2, 3, 4}, find A ∪ B.",
+        solution: "A ∪ B = {1, 2, 3, 4}"
+      },
+      {
+        problem: "Given sets A = {1, 2, 3} and B = {2, 3, 4}, find A ∩ B.",
+        solution: "A ∩ B = {2, 3}"
+      },
+      {
+        problem: "Given sets A = {1, 2, 3} and B = {2, 3, 4}, find A - B.",
+        solution: "A - B = {1}"
+      },
+      {
+        problem: "If A = {a, b, c} and B = {b, c, d, e}, find A ∪ B and A ∩ B.",
+        solution: "A ∪ B = {a, b, c, d, e}; A ∩ B = {b, c}"
+      },
+      {
+        problem: "Explain the difference between A ∪ B and A ∩ B.",
+        solution: "A ∪ B contains all elements in A or B (union). A ∩ B contains only elements in both A and B (intersection)."
+      },
+      {
+        problem: "Given U = {1, 2, 3, 4, 5}, A = {1, 3}, and B = {2, 3, 4}, find (A ∪ B) - B.",
+        solution: "(A ∪ B) = {1, 2, 3, 4}, so (A ∪ B) - B = {1}"
+      }
+    ]
   },
   "special-sets": {
     title: "Special Sets and Properties",
+    description: "Subsets, power sets, and important properties",
     content: `
       <h2>⭐ Special Sets and Properties</h2>
       <p>Certain sets and relationships between sets have special properties that are important in computer science applications.</p>
@@ -117,33 +172,32 @@ export const lessonContent = {
         <li><strong>Antisymmetric:</strong> If A ⊆ B and B ⊆ A, then A = B</li>
         <li><strong>Transitive:</strong> If A ⊆ B and B ⊆ C, then A ⊆ C</li>
       </ul>
-    `
-  }
-};
-
-export const practiceProblems = {
-  1: {
-    problem: "Given sets A = {1, 2, 3} and B = {2, 3, 4}, find A ∪ B.",
-    solution: "A ∪ B = {1, 2, 3, 4}"
-  },
-  2: {
-    problem: "Given sets A = {1, 2, 3} and B = {2, 3, 4}, find A ∩ B.",
-    solution: "A ∩ B = {2, 3}"
-  },
-  3: {
-    problem: "Given sets A = {1, 2, 3} and B = {2, 3, 4}, find A - B.",
-    solution: "A - B = {1}"
-  },
-  4: {
-    problem: "Determine if {1, 2} ⊆ {1, 2, 3, 4}.",
-    solution: "Yes, {1, 2} ⊆ {1, 2, 3, 4} because every element of the first set is in the second set."
-  },
-  5: {
-    problem: "Find the power set of {a, b}.",
-    solution: "P({a, b}) = {∅, {a}, {b}, {a, b}}"
-  },
-  6: {
-    problem: "Given U = {1, 2, 3, 4, 5} and A = {1, 3, 5}, find ∁A.",
-    solution: "∁A = {2, 4}"
+    `,
+    practiceProblems: [
+      {
+        problem: "Determine if {1, 2} ⊆ {1, 2, 3, 4}.",
+        solution: "Yes, {1, 2} ⊆ {1, 2, 3, 4} because every element of the first set is in the second set."
+      },
+      {
+        problem: "Find the power set of {a, b}.",
+        solution: "P({a, b}) = {∅, {a}, {b}, {a, b}}"
+      },
+      {
+        problem: "Given U = {1, 2, 3, 4, 5} and A = {1, 3, 5}, find ∁A.",
+        solution: "∁A = {2, 4}"
+      },
+      {
+        problem: "How many subsets does the set {1, 2, 3} have?",
+        solution: "The power set has 2^3 = 8 subsets: ∅, {1}, {2}, {3}, {1,2}, {1,3}, {2,3}, {1,2,3}"
+      },
+      {
+        problem: "Is {1, 2} ⊂ {1, 2}? Is {1, 2} ⊆ {1, 2}?",
+        solution: "No for ⊂ (proper subset). Yes for ⊆ (subset, includes equal sets)."
+      },
+      {
+        problem: "If A ⊆ B and B ⊆ C, what can you conclude about A and C?",
+        solution: "By transitivity, A ⊆ C (A is a subset of C)."
+      }
+    ]
   }
 };
