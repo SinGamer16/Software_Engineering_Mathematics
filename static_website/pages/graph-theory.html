@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Theory - Software Engineering Mathematics</title>
+    <meta name="description" content="Master graph theory fundamentals essential for algorithms and data structures">
+    <meta name="keywords" content="graph theory, algorithms, data structures, networks, software engineering">
+    <meta name="author" content="Software Engineering Mathematics">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Graph Theory - Software Engineering Mathematics">
+    <meta property="og:description" content="Master graph theory fundamentals essential for algorithms and data structures">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Puppertino CSS Framework -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codedgar/Puppertino@latest/dist/css/newfull.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/custom.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- MathJax for mathematical expressions -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <a href="../index.html">
+                    <h1>Software Engineering Mathematics</h1>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <a href="../index.html" class="navbar-item">Home</a>
+                <a href="#overview" class="navbar-item active">Overview</a>
+                <a href="#topics" class="navbar-item">Topics</a>
+                <a href="#practice" class="navbar-item">Practice</a>
+            </div>
+            <div class="navbar-toggle">
+                <button class="btn btn-icon" id="theme-toggle">
+                    <span class="icon">🌙</span>
+                </button>
+                <button class="btn btn-icon" id="menu-toggle">
+                    <span class="icon">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <div class="page-icon">🕸️</div>
+                <h1>Graph Theory</h1>
+                <p class="page-subtitle">Modeling relationships and networks in computer science</p>
+                <div class="page-meta">
+                    <span class="meta-item">📖 9 Topics</span>
+                    <span class="meta-item">🎯 27 Practice Problems</span>
+                    <span class="meta-item">⏱️ 10-12 hours</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-main">
+                    <h2>Course Overview</h2>
+                    <p>Graph Theory provides the mathematical foundation for understanding networks, relationships, and connectivity. In software engineering, graphs model everything from social networks and transportation systems to dependency relationships in code and algorithm design.</p>
+
+                    <div class="learning-objectives">
+                        <h3>🎯 Learning Objectives</h3>
+                        <ul>
+                            <li>Understand graph representations and basic properties</li>
+                            <li>Master graph traversal algorithms (DFS, BFS)</li>
+                            <li>Apply shortest path and minimum spanning tree algorithms</li>
+                            <li>Analyze graph connectivity and cycles</li>
+                            <li>Connect graph theory to real-world software applications</li>
+                        </ul>
+                    </div>
+
+                    <div class="prerequisites">
+                        <h3>📋 Prerequisites</h3>
+                        <ul>
+                            <li>Basic discrete mathematics</li>
+                            <li>Set theory and relations</li>
+                            <li>Basic algorithm concepts</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-sidebar">
+                    <div class="card">
+                        <h4>Course Structure</h4>
+                        <ul class="course-structure">
+                            <li><a href="#fundamentals">Graph Fundamentals</a></li>
+                            <li><a href="#algorithms">Graph Algorithms</a></li>
+                            <li><a href="#applications">Applications</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4>Quick Progress</h4>
+                        <div class="progress-tracker">
+                            <div class="progress-item completed">
+                                <span class="progress-icon">✓</span>
+                                <span>Graphs & Digraphs</span>
+                            </div>
+                            <div class="progress-item current">
+                                <span class="progress-icon">○</span>
+                                <span>Trees</span>
+                            </div>
+                            <div class="progress-item">
+                                <span class="progress-icon">○</span>
+                                <span>Traversal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics Section -->
+    <section id="topics" class="topics-section">
+        <div class="container">
+            <h2>Course Topics</h2>
+
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">🔗</div>
+                        <h3>Graphs and Digraphs</h3>
+                    </div>
+                    <p>Basic graph concepts, representations, and directed graphs.</p>
+                    <div class="topic-meta">
+                        <span>📖 2 lessons</span>
+                        <span>🎯 3 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">🌳</div>
+                        <h3>Trees</h3>
+                    </div>
+                    <p>Tree structures, spanning trees, and tree properties.</p>
+                    <div class="topic-meta">
+                        <span>📖 2 lessons</span>
+                        <span>🎯 3 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">🔄</div>
+                        <h3>Connectivity</h3>
+                    </div>
+                    <p>Connected components, bridges, and articulation points.</p>
+                    <div class="topic-meta">
+                        <span>📖 2 lessons</span>
+                        <span>🎯 3 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">⭕</div>
+                        <h3>Cycles</h3>
+                    </div>
+                    <p>Cycle detection, Eulerian and Hamiltonian paths.</p>
+                    <div class="topic-meta">
+                        <span>📖 2 lessons</span>
+                        <span>🎯 3 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">🔍</div>
+                        <h3>Graph Traversal (DFS, BFS)</h3>
+                    </div>
+                    <p>Depth-first and breadth-first search algorithms.</p>
+                    <div class="topic-meta">
+                        <span>📖 3 lessons</span>
+                        <span>🎯 6 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">📏</div>
+                        <h3>Shortest Paths</h3>
+                    </div>
+                    <p>Dijkstra's algorithm, Bellman-Ford, and Floyd-Warshall.</p>
+                    <div class="topic-meta">
+                        <span>📖 3 lessons</span>
+                        <span>🎯 6 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">🌉</div>
+                        <h3>Minimum Spanning Trees</h3>
+                    </div>
+                    <p>Kruskal's and Prim's algorithms for MST construction.</p>
+                    <div class="topic-meta">
+                        <span>📖 2 lessons</span>
+                        <span>🎯 3 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">⚖️</div>
+                        <h3>Bipartite Graphs</h3>
+                    </div>
+                    <p>Matching problems and bipartite graph algorithms.</p>
+                    <div class="topic-meta">
+                        <span>📖 2 lessons</span>
+                        <span>🎯 3 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">📋</div>
+                        <h3>Topological Sorting</h3>
+                    </div>
+                    <p>Ordering dependencies and DAG applications.</p>
+                    <div class="topic-meta">
+                        <span>📖 2 lessons</span>
+                        <span>🎯 3 problems</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="application-section">
+                <h3>💡 Applications in Software Engineering</h3>
+                <div class="application-grid">
+                    <div class="application-card">
+                        <h4>Data Structures</h4>
+                        <p>Graphs form the basis of many data structures like trees, heaps, and adjacency lists.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Network Routing</h4>
+                        <p>Shortest path algorithms power GPS navigation and network packet routing.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Dependency Resolution</h4>
+                        <p>Topological sorting resolves package dependencies in build systems.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Social Networks</h4>
+                        <p>Graph algorithms analyze connections, communities, and influence in social graphs.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Compiler Design</h4>
+                        <p>Control flow graphs and dependency graphs are essential in compiler optimization.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Recommendation Systems</h4>
+                        <p>Graph-based collaborative filtering powers personalized recommendations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Section -->
+    <section id="practice" class="practice-section">
+        <div class="container">
+            <h2>Practice Problems</h2>
+
+            <div class="practice-grid">
+                <div class="practice-category">
+                    <h3>Graphs and Digraphs</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: Graph Definition</h4>
+                            <p>Define graphs, vertices, edges, and explain their purpose in modeling relationships.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: Graph Representations</h4>
+                            <p>Apply adjacency matrices and adjacency lists to represent graph structures.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: Graph Properties</h4>
+                            <p>Analyze and prove properties related to graph structures and their invariants.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-category">
+                    <h3>Trees</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: Tree Definition</h4>
+                            <p>Define trees and explain their properties as acyclic connected graphs.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: Tree Algorithms</h4>
+                            <p>Apply tree traversal algorithms and understand tree representations.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: Tree Theorems</h4>
+                            <p>Prove theorems about trees and their relationship to other graph structures.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-category">
+                    <h3>Connectivity</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: Connected Components</h4>
+                            <p>Define connectivity and identify connected components in graphs.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: Bridge Finding</h4>
+                            <p>Apply algorithms to find bridges and articulation points in graphs.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: Connectivity Proofs</h4>
+                            <p>Analyze and prove properties related to graph connectivity.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-category">
+                    <h3>Graph Traversal</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: DFS and BFS</h4>
+                            <p>Define depth-first and breadth-first search algorithms.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: Traversal Implementation</h4>
+                            <p>Apply DFS and BFS to solve graph traversal problems.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: Traversal Analysis</h4>
+                            <p>Analyze time and space complexity of graph traversal algorithms.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-category">
+                    <h3>Shortest Paths</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: Dijkstra's Algorithm</h4>
+                            <p>Define shortest path problems and Dijkstra's algorithm approach.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: Algorithm Implementation</h4>
+                            <p>Apply shortest path algorithms to weighted graphs.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: Algorithm Variants</h4>
+                            <p>Analyze Bellman-Ford and Floyd-Warshall for different graph types.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-category">
+                    <h3>Minimum Spanning Trees</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: MST Definition</h4>
+                            <p>Define minimum spanning trees and their properties.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: Kruskal's Algorithm</h4>
+                            <p>Apply Kruskal's and Prim's algorithms to construct MSTs.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: MST Proofs</h4>
+                            <p>Prove correctness and optimality of MST algorithms.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Software Engineering Mathematics</h4>
+                    <p>A comprehensive mathematics curriculum for software engineering students.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#topics">Topics</a></li>
+                        <li><a href="#practice">Practice</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Related Courses</h4>
+                    <ul>
+                        <li><a href="discrete-math.html">Discrete Mathematics</a></li>
+                        <li><a href="algorithms.html">Algorithms & Complexity</a></li>
+                        <li><a href="linear-algebra.html">Linear Algebra</a></li>
+                        <li><a href="probability.html">Probability & Statistics</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Software Engineering Mathematics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Theory - Software Engineering Mathematics</title>
+    <meta name="description" content="Master information theory fundamentals for data compression and communication systems">
+    <meta name="keywords" content="information theory, entropy, data compression, coding theory, software engineering">
+    <meta name="author" content="Software Engineering Mathematics">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Information Theory - Software Engineering Mathematics">
+    <meta property="og:description" content="Master information theory fundamentals for data compression and communication systems">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Puppertino CSS Framework -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codedgar/Puppertino@latest/dist/css/newfull.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/custom.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- MathJax for mathematical expressions -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <a href="../index.html">
+                    <h1>Software Engineering Mathematics</h1>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <a href="../index.html" class="navbar-item">Home</a>
+                <a href="#overview" class="navbar-item active">Overview</a>
+                <a href="#topics" class="navbar-item">Topics</a>
+                <a href="#practice" class="navbar-item">Practice</a>
+            </div>
+            <div class="navbar-toggle">
+                <button class="btn btn-icon" id="theme-toggle">
+                    <span class="icon">🌙</span>
+                </button>
+                <button class="btn btn-icon" id="menu-toggle">
+                    <span class="icon">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <div class="page-icon">📡</div>
+                <h1>Information Theory</h1>
+                <p class="page-subtitle">The mathematics of data compression, communication, and information processing</p>
+                <div class="page-meta">
+                    <span class="meta-item">📖 3 Topics</span>
+                    <span class="meta-item">🎯 9 Practice Problems</span>
+                    <span class="meta-item">⏱️ 4-6 hours</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-main">
+                    <h2>Course Overview</h2>
+                    <p>Information Theory provides the mathematical foundation for understanding how information can be measured, compressed, and transmitted efficiently. These concepts are fundamental to data compression algorithms, error-correcting codes, and modern communication systems.</p>
+
+                    <div class="learning-objectives">
+                        <h3>🎯 Learning Objectives</h3>
+                        <ul>
+                            <li>Understand entropy and information measures</li>
+                            <li>Master data compression algorithms</li>
+                            <li>Apply error-correcting codes</li>
+                            <li>Analyze communication channel capacity</li>
+                            <li>Connect information theory to practical applications</li>
+                        </ul>
+                    </div>
+
+                    <div class="prerequisites">
+                        <h3>📋 Prerequisites</h3>
+                        <ul>
+                            <li>Probability theory</li>
+                            <li>Discrete mathematics</li>
+                            <li>Basic algorithm concepts</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-sidebar">
+                    <div class="card">
+                        <h4>Course Structure</h4>
+                        <ul class="course-structure">
+                            <li><a href="#entropy">Entropy & Information</a></li>
+                            <li><a href="#compression">Data Compression</a></li>
+                            <li><a href="#coding">Error-Correcting Codes</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4>Quick Progress</h4>
+                        <div class="progress-tracker">
+                            <div class="progress-item completed">
+                                <span class="progress-icon">✓</span>
+                                <span>Entropy</span>
+                            </div>
+                            <div class="progress-item current">
+                                <span class="progress-icon">○</span>
+                                <span>Huffman Coding</span>
+                            </div>
+                            <div class="progress-item">
+                                <span class="progress-icon">○</span>
+                                <span>Channel Coding</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics Section -->
+    <section id="topics" class="topics-section">
+        <div class="container">
+            <h2>Course Topics</h2>
+
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">📊</div>
+                        <h3>Entropy and Information Measures</h3>
+                    </div>
+                    <p>Shannon entropy, mutual information, and Kullback-Leibler divergence.</p>
+                    <div class="topic-meta">
+                        <span>📖 2 lessons</span>
+                        <span>🎯 3 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">🗜️</div>
+                        <h3>Data Compression</h3>
+                    </div>
+                    <p>Huffman coding, LZW compression, and lossless compression algorithms.</p>
+                    <div class="topic-meta">
+                        <span>📖 3 lessons</span>
+                        <span>🎯 6 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">🔧</div>
+                        <h3>Error-Correcting Codes</h3>
+                    </div>
+                    <p>Hamming codes, Reed-Solomon codes, and channel capacity theorems.</p>
+                    <div class="topic-meta">
+                        <span>📖 3 lessons</span>
+                        <span>🎯 6 problems</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="application-section">
+                <h3>💡 Applications in Software Engineering</h3>
+                <div class="application-grid">
+                    <div class="application-card">
+                        <h4>Data Compression</h4>
+                        <p>ZIP, GZIP, and image compression algorithms use entropy-based techniques.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Network Protocols</h4>
+                        <p>TCP/IP error detection and correction use information theory principles.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Storage Systems</h4>
+                        <p>RAID systems and error-correcting memory use coding theory.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Cryptography</h4>
+                        <p>Information-theoretic security provides unconditional security guarantees.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Machine Learning</h4>
+                        <p>Decision trees and feature selection use information gain measures.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Digital Communication</h4>
+                        <p>Modems, wireless networks, and satellite communication rely on channel coding.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Section -->
+    <section id="practice" class="practice-section">
+        <div class="container">
+            <h2>Practice Problems</h2>
+
+            <div class="practice-grid">
+                <div class="practice-category">
+                    <h3>Entropy and Information</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: Shannon Entropy</h4>
+                            <p>Define entropy and calculate it for discrete random variables.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: Mutual Information</h4>
+                            <p>Apply mutual information to measure dependence between random variables.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: Information Inequalities</h4>
+                            <p>Prove fundamental inequalities in information theory.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-category">
+                    <h3>Data Compression</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: Huffman Coding</h4>
+                            <p>Construct Huffman codes and analyze their optimality.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: LZW Algorithm</h4>
+                            <p>Apply LZW compression algorithm to text and analyze compression ratios.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: Compression Bounds</h4>
+                            <p>Prove bounds on achievable compression ratios using entropy.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-category">
+                    <h3>Error-Correcting Codes</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: Hamming Codes</h4>
+                            <p>Construct Hamming codes and implement error detection and correction.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: Reed-Solomon</h4>
+                            <p>Apply Reed-Solomon codes for burst error correction.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: Channel Capacity</h4>
+                            <p>Analyze Shannon's channel coding theorem and capacity calculations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Software Engineering Mathematics</h4>
+                    <p>A comprehensive mathematics curriculum for software engineering students.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#topics">Topics</a></li>
+                        <li><a href="#practice">Practice</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Related Courses</h4>
+                    <ul>
+                        <li><a href="cryptography.html">Cryptography Mathematics</a></li>
+                        <li><a href="probability.html">Probability & Statistics</a></li>
+                        <li><a href="discrete-math.html">Discrete Mathematics</a></li>
+                        <li><a href="algorithms.html">Algorithms & Complexity</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Software Engineering Mathematics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

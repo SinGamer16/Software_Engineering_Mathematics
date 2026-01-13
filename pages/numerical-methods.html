@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numerical Methods - Software Engineering Mathematics</title>
+    <meta name="description" content="Master numerical computation techniques for scientific computing and algorithm implementation">
+    <meta name="keywords" content="numerical methods, scientific computing, floating-point arithmetic, root finding, software engineering">
+    <meta name="author" content="Software Engineering Mathematics">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Numerical Methods - Software Engineering Mathematics">
+    <meta property="og:description" content="Master numerical computation techniques for scientific computing and algorithm implementation">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Puppertino CSS Framework -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codedgar/Puppertino@latest/dist/css/newfull.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/custom.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- MathJax for mathematical expressions -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <a href="../index.html">
+                    <h1>Software Engineering Mathematics</h1>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <a href="../index.html" class="navbar-item">Home</a>
+                <a href="#overview" class="navbar-item active">Overview</a>
+                <a href="#topics" class="navbar-item">Topics</a>
+                <a href="#practice" class="navbar-item">Practice</a>
+            </div>
+            <div class="navbar-toggle">
+                <button class="btn btn-icon" id="theme-toggle">
+                    <span class="icon">🌙</span>
+                </button>
+                <button class="btn btn-icon" id="menu-toggle">
+                    <span class="icon">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <div class="page-icon">🔢</div>
+                <h1>Numerical Methods</h1>
+                <p class="page-subtitle">Approximation techniques for solving mathematical problems computationally</p>
+                <div class="page-meta">
+                    <span class="meta-item">📖 5 Topics</span>
+                    <span class="meta-item">🎯 15 Practice Problems</span>
+                    <span class="meta-item">⏱️ 6-8 hours</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-main">
+                    <h2>Course Overview</h2>
+                    <p>Numerical Methods provide the computational techniques needed when analytical solutions are impossible or impractical. Understanding numerical stability, error analysis, and approximation algorithms is crucial for implementing reliable scientific computing software and numerical algorithms.</p>
+
+                    <div class="learning-objectives">
+                        <h3>🎯 Learning Objectives</h3>
+                        <ul>
+                            <li>Understand floating-point arithmetic limitations</li>
+                            <li>Master root-finding and optimization algorithms</li>
+                            <li>Apply numerical integration and differentiation</li>
+                            <li>Analyze numerical stability and error propagation</li>
+                            <li>Implement numerical methods in software systems</li>
+                        </ul>
+                    </div>
+
+                    <div class="prerequisites">
+                        <h3>📋 Prerequisites</h3>
+                        <ul>
+                            <li>Calculus (limits, derivatives, integrals)</li>
+                            <li>Linear algebra basics</li>
+                            <li>Programming fundamentals</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-sidebar">
+                    <div class="card">
+                        <h4>Course Structure</h4>
+                        <ul class="course-structure">
+                            <li><a href="#arithmetic">Floating-Point Arithmetic</a></li>
+                            <li><a href="#root-finding">Root Finding Methods</a></li>
+                            <li><a href="#linear-systems">Linear Systems</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4>Quick Progress</h4>
+                        <div class="progress-tracker">
+                            <div class="progress-item completed">
+                                <span class="progress-icon">✓</span>
+                                <span>Floating-Point</span>
+                            </div>
+                            <div class="progress-item current">
+                                <span class="progress-icon">○</span>
+                                <span>Root Finding</span>
+                            </div>
+                            <div class="progress-item">
+                                <span class="progress-icon">○</span>
+                                <span>Integration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics Section -->
+    <section id="topics" class="topics-section">
+        <div class="container">
+            <h2>Course Topics</h2>
+
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">💾</div>
+                        <h3>Floating-Point Arithmetic</h3>
+                    </div>
+                    <p>IEEE 754 standard, precision limits, and rounding errors.</p>
+                    <div class="topic-meta">
+                        <span>📖 2 lessons</span>
+                        <span>🎯 3 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">📏</div>
+                        <h3>Numerical Stability</h3>
+                    </div>
+                    <p>Condition numbers, stability analysis, and error propagation.</p>
+                    <div class="topic-meta">
+                        <span>📖 2 lessons</span>
+                        <span>🎯 3 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">🎯</div>
+                        <h3>Root-Finding Methods</h3>
+                    </div>
+                    <p>Bisection, Newton-Raphson, and secant methods for finding roots.</p>
+                    <div class="topic-meta">
+                        <span>📖 3 lessons</span>
+                        <span>🎯 6 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">∫</div>
+                        <h3>Numerical Integration</h3>
+                    </div>
+                    <p>Trapezoidal rule, Simpson's rule, and adaptive quadrature.</p>
+                    <div class="topic-meta">
+                        <span>📖 2 lessons</span>
+                        <span>🎯 3 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">🔧</div>
+                        <h3>Solving Linear Systems</h3>
+                    </div>
+                    <p>Gaussian elimination, LU decomposition, and iterative methods.</p>
+                    <div class="topic-meta">
+                        <span>📖 3 lessons</span>
+                        <span>🎯 6 problems</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="application-section">
+                <h3>💡 Applications in Software Engineering</h3>
+                <div class="application-grid">
+                    <div class="application-card">
+                        <h4>Scientific Computing Libraries</h4>
+                        <p>Numerical methods form the core of libraries like NumPy, SciPy, and MATLAB.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Computer Graphics</h4>
+                        <p>Rendering algorithms use numerical integration for lighting and physics simulation.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Machine Learning</h4>
+                        <p>Optimization algorithms rely on numerical methods for gradient computation.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Simulation Software</h4>
+                        <p>Physics engines and simulations use numerical integration for time-stepping.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Financial Modeling</h4>
+                        <p>Risk analysis and option pricing use numerical methods for complex calculations.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Signal Processing</h4>
+                        <p>FFT algorithms and digital filters rely on numerical stability principles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Section -->
+    <section id="practice" class="practice-section">
+        <div class="container">
+            <h2>Practice Problems</h2>
+
+            <div class="practice-grid">
+                <div class="practice-category">
+                    <h3>Floating-Point Arithmetic</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: IEEE 754</h4>
+                            <p>Define floating-point representation and explain precision limitations.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: Rounding Errors</h4>
+                            <p>Apply floating-point arithmetic to analyze computational errors in algorithms.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: Error Analysis</h4>
+                            <p>Analyze and prove properties related to floating-point error propagation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-category">
+                    <h3>Numerical Stability</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: Condition Numbers</h4>
+                            <p>Define condition numbers and explain their role in numerical stability.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: Stability Analysis</h4>
+                            <p>Apply stability analysis to evaluate numerical algorithm reliability.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: Backward Stability</h4>
+                            <p>Prove backward stability properties of numerical algorithms.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-category">
+                    <h3>Root-Finding Methods</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: Bisection Method</h4>
+                            <p>Define the bisection method and explain its convergence properties.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: Newton-Raphson</h4>
+                            <p>Apply Newton-Raphson method and analyze its quadratic convergence.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: Method Comparison</h4>
+                            <p>Compare convergence rates and stability of different root-finding algorithms.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-category">
+                    <h3>Numerical Integration</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: Trapezoidal Rule</h4>
+                            <p>Define numerical integration methods and explain error bounds.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: Simpson's Rule</h4>
+                            <p>Apply composite integration rules for improved accuracy.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: Adaptive Quadrature</h4>
+                            <p>Implement adaptive algorithms that adjust step size based on error estimates.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-category">
+                    <h3>Linear Systems</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: Gaussian Elimination</h4>
+                            <p>Define Gaussian elimination and explain pivoting strategies.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: LU Decomposition</h4>
+                            <p>Apply LU decomposition for efficient solution of multiple right-hand sides.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: Iterative Methods</h4>
+                            <p>Analyze convergence of Jacobi and Gauss-Seidel iterative methods.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Software Engineering Mathematics</h4>
+                    <p>A comprehensive mathematics curriculum for software engineering students.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#topics">Topics</a></li>
+                        <li><a href="#practice">Practice</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Related Courses</h4>
+                    <ul>
+                        <li><a href="calculus.html">Calculus</a></li>
+                        <li><a href="linear-algebra.html">Linear Algebra</a></li>
+                        <li><a href="probability.html">Probability & Statistics</a></li>
+                        <li><a href="optimization.html">Optimization</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Software Engineering Mathematics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

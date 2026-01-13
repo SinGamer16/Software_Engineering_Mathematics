@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probability and Statistics - Software Engineering Mathematics</title>
+    <meta name="description" content="Master probability theory, statistical inference, and data analysis for software engineering applications">
+    <meta name="keywords" content="probability, statistics, distributions, hypothesis testing, A/B testing">
+    <meta name="author" content="Software Engineering Mathematics">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Probability and Statistics - Software Engineering Mathematics">
+    <meta property="og:description" content="Master probability theory, statistical inference, and data analysis for software engineering applications">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Puppertino CSS Framework -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codedgar/Puppertino@latest/dist/css/newfull.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/custom.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- MathJax for mathematical expressions -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <a href="../index.html">
+                    <h1>Software Engineering Mathematics</h1>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <a href="../index.html" class="navbar-item">Home</a>
+                <a href="#overview" class="navbar-item active">Overview</a>
+                <a href="#probability" class="navbar-item">Probability</a>
+                <a href="#distributions" class="navbar-item">Distributions</a>
+                <a href="#statistics" class="navbar-item">Statistics</a>
+                <a href="#inference" class="navbar-item">Inference</a>
+            </div>
+            <div class="navbar-toggle">
+                <button class="btn btn-icon" id="theme-toggle">
+                    <span class="icon">🌙</span>
+                </button>
+                <button class="btn btn-icon" id="menu-toggle">
+                    <span class="icon">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <div class="page-icon">📊</div>
+                <h1>Probability and Statistics</h1>
+                <p class="page-subtitle">Understanding uncertainty, data analysis, and statistical inference</p>
+                <div class="page-meta">
+                    <span class="meta-item">📈 20 Topics</span>
+                    <span class="meta-item">🎯 80 Practice Problems</span>
+                    <span class="meta-item">⏱️ 18-22 hours</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-main">
+                    <h2>Course Overview</h2>
+                    <p>Probability and Statistics are essential for data-driven software engineering. This course covers probability theory, statistical methods, and their applications in machine learning, A/B testing, performance analysis, and decision making under uncertainty.</p>
+
+                    <div class="learning-objectives">
+                        <h3>🎯 Learning Objectives</h3>
+                        <ul>
+                            <li>Master probability theory and random variables</li>
+                            <li>Understand common probability distributions</li>
+                            <li>Apply statistical inference techniques</li>
+                            <li>Analyze data using descriptive and inferential statistics</li>
+                            <li>Design and interpret experiments and A/B tests</li>
+                            <li>Apply probabilistic thinking to software engineering problems</li>
+                        </ul>
+                    </div>
+
+                    <div class="prerequisites">
+                        <h3>📋 Prerequisites</h3>
+                        <ul>
+                            <li>Basic algebra and arithmetic</li>
+                            <li>Calculus (helpful for continuous distributions)</li>
+                            <li>Mathematical reasoning skills</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-sidebar">
+                    <div class="card">
+                        <h4>Course Structure</h4>
+                        <ul class="course-structure">
+                            <li><a href="#probability">Probability Theory</a></li>
+                            <li><a href="#distributions">Random Variables & Distributions</a></li>
+                            <li><a href="#statistics">Descriptive Statistics</a></li>
+                            <li><a href="#inference">Statistical Inference</a></li>
+                            <li><a href="#applications">Applications in SE</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4>Key Applications</h4>
+                        <div class="application-tags">
+                            <span class="tag">A/B Testing</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Performance Analysis</span>
+                            <span class="tag">Risk Assessment</span>
+                            <span class="tag">Data Science</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Probability Section -->
+    <section id="probability" class="topics-section">
+        <div class="container">
+            <h2>Probability Theory</h2>
+
+            <div class="probability-grid">
+                <div class="probability-card">
+                    <h3>Basic Concepts</h3>
+                    <div class="concept-definitions">
+                        <div class="concept">
+                            <h4>Sample Space (S)</h4>
+                            <p>Set of all possible outcomes of an experiment</p>
+                        </div>
+                        <div class="concept">
+                            <h4>Event (A)</h4>
+                            <p>Subset of the sample space</p>
+                        </div>
+                        <div class="concept">
+                            <h4>Probability (P)</h4>
+                            <p>P(A) = |A| / |S| for equally likely outcomes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="probability-card">
+                    <h3>Axioms of Probability</h3>
+                    <ol>
+                        <li><strong>Non-negativity:</strong> P(A) ≥ 0 for any event A</li>
+                        <li><strong>Unit measure:</strong> P(S) = 1</li>
+                        <li><strong>Additivity:</strong> For disjoint events A and B: P(A ∪ B) = P(A) + P(B)</li>
+                    </ol>
+
+                    <div class="probability-rules">
+                        <h4>Basic Rules</h4>
+                        <ul>
+                            <li><strong>Complement:</strong> P(Ā) = 1 - P(A)</li>
+                            <li><strong>Addition:</strong> P(A ∪ B) = P(A) + P(B) - P(A ∩ B)</li>
+                            <li><strong>Multiplication:</strong> P(A ∩ B) = P(A|B) × P(B)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Distributions Section -->
+    <section id="distributions" class="content-section">
+        <div class="container">
+            <h2>Random Variables and Distributions</h2>
+
+            <div class="distributions-grid">
+                <div class="distribution-card">
+                    <h3>Discrete Distributions</h3>
+                    <div class="distribution-examples">
+                        <div class="dist">
+                            <h4>Binomial</h4>
+                            <p>PMF: \( P(X = k) = \binom{n}{k} p^k (1-p)^{n-k} \)</p>
+                            <p>Parameters: n trials, p success probability</p>
+                        </div>
+                        <div class="dist">
+                            <h4>Poisson</h4>
+                            <p>PMF: \( P(X = k) = \frac{e^{-\lambda} \lambda^k}{k!} \)</p>
+                            <p>Parameters: λ average rate</p>
+                        </div>
+                        <div class="dist">
+                            <h4>Geometric</h4>
+                            <p>PMF: \( P(X = k) = (1-p)^{k-1} p \)</p>
+                            <p>Parameters: p success probability</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="distribution-card">
+                    <h3>Continuous Distributions</h3>
+                    <div class="distribution-examples">
+                        <div class="dist">
+                            <h4>Normal (Gaussian)</h4>
+                            <p>PDF: \( f(x) = \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}} \)</p>
+                            <p>Parameters: μ mean, σ standard deviation</p>
+                        </div>
+                        <div class="dist">
+                            <h4>Exponential</h4>
+                            <p>PDF: \( f(x) = \lambda e^{-\lambda x} \) for x ≥ 0</p>
+                            <p>Parameters: λ rate parameter</p>
+                        </div>
+                        <div class="dist">
+                            <h4>Uniform</h4>
+                            <p>PDF: \( f(x) = \frac{1}{b-a} \) for a ≤ x ≤ b</p>
+                            <p>Parameters: a min, b max</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="statistics" class="topics-section">
+        <div class="container">
+            <h2>Descriptive Statistics</h2>
+
+            <div class="statistics-grid">
+                <div class="statistic-card">
+                    <h3>Measures of Central Tendency</h3>
+                    <div class="measure-examples">
+                        <div class="measure">
+                            <h4>Mean (Average)</h4>
+                            <p>\( \bar{x} = \frac{\sum x_i}{n} \)</p>
+                            <p>Sensitive to outliers</p>
+                        </div>
+                        <div class="measure">
+                            <h4>Median</h4>
+                            <p>Middle value when data is sorted</p>
+                            <p>Robust to outliers</p>
+                        </div>
+                        <div class="measure">
+                            <h4>Mode</h4>
+                            <p>Most frequent value</p>
+                            <p>May not exist or be unique</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="statistic-card">
+                    <h3>Measures of Variability</h3>
+                    <div class="measure-examples">
+                        <div class="measure">
+                            <h4>Variance</h4>
+                            <p>\( s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1} \)</p>
+                            <p>Average squared deviation</p>
+                        </div>
+                        <div class="measure">
+                            <h4>Standard Deviation</h4>
+                            <p>\( s = \sqrt{s^2} \)</p>
+                            <p>Square root of variance</p>
+                        </div>
+                        <div class="measure">
+                            <h4>Interquartile Range (IQR)</h4>
+                            <p>Q3 - Q1 (75th - 25th percentile)</p>
+                            <p>Robust measure of spread</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inference Section -->
+    <section id="inference" class="content-section">
+        <div class="container">
+            <h2>Statistical Inference</h2>
+
+            <div class="inference-grid">
+                <div class="inference-card">
+                    <h3>Hypothesis Testing</h3>
+                    <div class="testing-framework">
+                        <h4>Steps in Hypothesis Testing</h4>
+                        <ol>
+                            <li>State null (H₀) and alternative (H₁) hypotheses</li>
+                            <li>Choose significance level (α)</li>
+                            <li>Calculate test statistic</li>
+                            <li>Find p-value or critical value</li>
+                            <li>Make decision: reject H₀ or fail to reject H₀</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="inference-card">
+                    <h3>Confidence Intervals</h3>
+                    <div class="ci-examples">
+                        <div class="ci">
+                            <h4>Mean (σ known)</h4>
+                            <p>\( \bar{x} \pm z_{\alpha/2} \frac{\sigma}{\sqrt{n}} \)</p>
+                        </div>
+                        <div class="ci">
+                            <h4>Mean (σ unknown)</h4>
+                            <p>\( \bar{x} \pm t_{\alpha/2, n-1} \frac{s}{\sqrt{n}} \)</p>
+                        </div>
+                        <div class="ci">
+                            <h4>Proportion</h4>
+                            <p>\( \hat{p} \pm z_{\alpha/2} \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Software Engineering Mathematics</h4>
+                    <p>A comprehensive mathematics curriculum for software engineering students.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#probability">Probability</a></li>
+                        <li><a href="#distributions">Distributions</a></li>
+                        <li><a href="#statistics">Statistics</a></li>
+                        <li><a href="#inference">Inference</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">All Courses</a></li>
+                        <li><a href="#">Practice Problems</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Software Engineering Mathematics. Built with ❤️ for the software engineering community.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Puppertino JavaScript -->
+    <script src="https://cdn.jsdelivr.net/gh/codedgar/Puppertino@latest/dist/js/darkmode_manager.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/codedgar/Puppertino@latest/dist/js/modals.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/codedgar/Puppertino@latest/dist/js/tabs.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1: Introduction to Sets - Software Engineering Mathematics</title>
+    <meta name="description" content="Learn the fundamentals of set theory and its applications in computer science">
+    <meta name="keywords" content="sets, set theory, discrete mathematics, computer science, software engineering">
+    <meta name="author" content="Software Engineering Mathematics">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Module 1: Introduction to Sets - Software Engineering Mathematics">
+    <meta property="og:description" content="Learn the fundamentals of set theory and its applications in computer science">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Puppertino CSS Framework -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codedgar/Puppertino@latest/dist/css/newfull.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../css/custom.css">
+    <link rel="stylesheet" href="../../../css/modules.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- MathJax for mathematical expressions -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <a href="../../../index.html">
+                    <h1>Software Engineering Mathematics</h1>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <a href="../../start-learning.html" class="navbar-item">Learning Path</a>
+                <a href="#content" class="navbar-item active">Module 1</a>
+                <a href="#practice" class="navbar-item">Practice</a>
+                <a href="#next" class="navbar-item">Next</a>
+            </div>
+            <div class="navbar-toggle">
+                <button class="btn btn-icon" id="theme-toggle">
+                    <span class="icon">🌙</span>
+                </button>
+                <button class="btn btn-icon" id="menu-toggle">
+                    <span class="icon">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Module Header -->
+    <section class="module-header">
+        <div class="container">
+            <div class="module-header-content">
+                <div class="module-breadcrumb">
+                    <a href="../../start-learning.html">Start Learning</a> ›
+                    <a href="../../../discrete-math.html">Discrete Mathematics</a> ›
+                    <span>Module 1: Sets</span>
+                </div>
+                <div class="module-icon">🔢</div>
+                <h1>Module 1: Introduction to Sets</h1>
+                <p class="module-subtitle">Understanding sets, their properties, and operations - the foundation of discrete mathematics</p>
+                <div class="module-meta">
+                    <span class="meta-item">⏱️ 45-60 minutes</span>
+                    <span class="meta-item">📖 3 lessons</span>
+                    <span class="meta-item">🎯 6 practice problems</span>
+                    <span class="meta-item">🏆 10 XP</span>
+                </div>
+                <div class="module-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <span class="progress-text">0% Complete</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module Content -->
+    <section id="content" class="module-content">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-main">
+                    <!-- Lesson 1 -->
+                    <div class="lesson-card" id="lesson-1">
+                        <div class="lesson-header">
+                            <div class="lesson-number">1.1</div>
+                            <h3>What is a Set?</h3>
+                            <div class="lesson-status" data-status="not-started">○</div>
+                        </div>
+                        <div class="lesson-content">
+                            <p>A <strong>set</strong> is a collection of distinct objects, called <strong>elements</strong> or <strong>members</strong>. Sets are fundamental to mathematics and computer science because they allow us to group related objects together.</p>
+
+                            <div class="definition-box">
+                                <h4>📖 Definition: Set</h4>
+                                <p>A set is an unordered collection of distinct objects. The objects in a set are called its elements or members.</p>
+                            </div>
+
+                            <h4>Examples of Sets:</h4>
+                            <ul>
+                                <li><strong>Vowels:</strong> {a, e, i, o, u} - the set of English vowels</li>
+                                <li><strong>Even numbers:</strong> {2, 4, 6, 8, ...} - the set of positive even integers</li>
+                                <li><strong>Primary colors:</strong> {red, blue, yellow} - the set of primary colors</li>
+                                <li><strong>Empty set:</strong> {} or ∅ - the set with no elements</li>
+                            </ul>
+
+                            <div class="key-concept">
+                                <h4>🔑 Key Concepts</h4>
+                                <ul>
+                                    <li><strong>Elements:</strong> Objects that belong to the set</li>
+                                    <li><strong>Membership:</strong> We use ∈ to show membership (x ∈ A means "x is an element of set A")</li>
+                                    <li><strong>Non-membership:</strong> We use ∉ to show non-membership (x ∉ A means "x is not an element of set A")</li>
+                                    <li><strong>Cardinality:</strong> The number of elements in a set, denoted |A|</li>
+                                </ul>
+                            </div>
+
+                            <div class="interactive-example">
+                                <h4>💡 Interactive Example</h4>
+                                <p>Consider the set A = {1, 2, 3, 4, 5}:</p>
+                                <ul>
+                                    <li>1 ∈ A ✓</li>
+                                    <li>6 ∉ A ✓</li>
+                                    <li>|A| = 5 ✓</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lesson-actions">
+                            <button class="btn btn-primary lesson-complete-btn" data-lesson="1">Mark as Complete</button>
+                        </div>
+                    </div>
+
+                    <!-- Lesson 2 -->
+                    <div class="lesson-card" id="lesson-2">
+                        <div class="lesson-header">
+                            <div class="lesson-number">1.2</div>
+                            <h3>Set Operations</h3>
+                            <div class="lesson-status" data-status="not-started">○</div>
+                        </div>
+                        <div class="lesson-content">
+                            <p>Sets can be combined and manipulated using various operations. These operations are fundamental to working with collections of data in computer science.</p>
+
+                            <h4>Basic Set Operations:</h4>
+
+                            <div class="operation-grid">
+                                <div class="operation-card">
+                                    <h5>Union (∪)</h5>
+                                    <p>A ∪ B = {x | x ∈ A or x ∈ B}</p>
+                                    <p><strong>Example:</strong> {1, 2, 3} ∪ {3, 4, 5} = {1, 2, 3, 4, 5}</p>
+                                </div>
+
+                                <div class="operation-card">
+                                    <h5>Intersection (∩)</h5>
+                                    <p>A ∩ B = {x | x ∈ A and x ∈ B}</p>
+                                    <p><strong>Example:</strong> {1, 2, 3} ∩ {3, 4, 5} = {3}</p>
+                                </div>
+
+                                <div class="operation-card">
+                                    <h5>Difference (-)</h5>
+                                    <p>A - B = {x | x ∈ A and x ∉ B}</p>
+                                    <p><strong>Example:</strong> {1, 2, 3} - {3, 4, 5} = {1, 2}</p>
+                                </div>
+
+                                <div class="operation-card">
+                                    <h5>Complement (∁)</h5>
+                                    <p>∁A = {x ∈ U | x ∉ A} (where U is the universal set)</p>
+                                    <p><strong>Example:</strong> If U = {1, 2, 3, 4, 5} and A = {1, 3, 5}, then ∁A = {2, 4}</p>
+                                </div>
+                            </div>
+
+                            <div class="venn-diagram">
+                                <h4>📊 Venn Diagrams</h4>
+                                <p>Venn diagrams help visualize set relationships:</p>
+                                <div class="venn-placeholder">
+                                    <p>[Venn diagram would show here - Union: overlapping area, Intersection: middle overlap, etc.]</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lesson-actions">
+                            <button class="btn btn-primary lesson-complete-btn" data-lesson="2">Mark as Complete</button>
+                        </div>
+                    </div>
+
+                    <!-- Lesson 3 -->
+                    <div class="lesson-card" id="lesson-3">
+                        <div class="lesson-header">
+                            <div class="lesson-number">1.3</div>
+                            <h3>Special Sets and Properties</h3>
+                            <div class="lesson-status" data-status="not-started">○</div>
+                        </div>
+                        <div class="lesson-content">
+                            <p>Certain sets and relationships between sets have special properties that are important in computer science applications.</p>
+
+                            <h4>Special Types of Sets:</h4>
+
+                            <div class="special-sets">
+                                <div class="set-type">
+                                    <h5>Empty Set (∅)</h5>
+                                    <p>The set with no elements. Note: ∅ ≠ {∅} (the set containing the empty set)</p>
+                                    <p><strong>Properties:</strong> |∅| = 0, A ∩ ∅ = ∅, A ∪ ∅ = A</p>
+                                </div>
+
+                                <div class="set-type">
+                                    <h5>Singleton Set</h5>
+                                    <p>A set with exactly one element: {x}</p>
+                                    <p><strong>Example:</strong> {5}, {"hello"}, {∅}</p>
+                                </div>
+
+                                <div class="set-type">
+                                    <h5>Power Set</h5>
+                                    <p>The set of all subsets of a set A, denoted P(A)</p>
+                                    <p><strong>Example:</strong> If A = {1, 2}, then P(A) = {∅, {1}, {2}, {1, 2}}</p>
+                                    <p><strong>Cardinality:</strong> |P(A)| = 2^|A|</p>
+                                </div>
+                            </div>
+
+                            <h4>Set Relationships:</h4>
+                            <ul>
+                                <li><strong>Subset:</strong> A ⊆ B means every element of A is also in B</li>
+                                <li><strong>Proper subset:</strong> A ⊂ B means A ⊆ B and A ≠ B</li>
+                                <li><strong>Equal sets:</strong> A = B means A ⊆ B and B ⊆ A</li>
+                                <li><strong>Disjoint sets:</strong> A ∩ B = ∅</li>
+                            </ul>
+
+                            <div class="cs-connection">
+                                <h4>💻 Computer Science Applications</h4>
+                                <ul>
+                                    <li><strong>Databases:</strong> Sets represent query results and relationships</li>
+                                    <li><strong>Programming:</strong> Sets are used in data structures like HashSet, TreeSet</li>
+                                    <li><strong>Algorithms:</strong> Set operations are fundamental to many algorithms</li>
+                                    <li><strong>Security:</strong> Access control lists use set membership</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lesson-actions">
+                            <button class="btn btn-primary lesson-complete-btn" data-lesson="3">Mark as Complete</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-sidebar">
+                    <div class="module-navigation">
+                        <h4>Module Navigation</h4>
+                        <ul class="lesson-nav">
+                            <li><a href="#lesson-1" class="lesson-nav-link active" data-lesson="1">1.1 What is a Set?</a></li>
+                            <li><a href="#lesson-2" class="lesson-nav-link" data-lesson="2">1.2 Set Operations</a></li>
+                            <li><a href="#lesson-3" class="lesson-nav-link" data-lesson="3">1.3 Special Sets</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="learning-objectives-sidebar">
+                        <h4>🎯 Learning Objectives</h4>
+                        <ul>
+                            <li>✓ Define sets and set membership</li>
+                            <li>✓ Perform basic set operations</li>
+                            <li>✓ Understand set relationships</li>
+                            <li>✓ Recognize CS applications of sets</li>
+                        </ul>
+                    </div>
+
+                    <div class="module-resources">
+                        <h4>📚 Additional Resources</h4>
+                        <ul>
+                            <li><a href="../../discrete-math.html">Complete Discrete Math Course</a></li>
+                            <li><a href="#practice">Practice Problems</a></li>
+                            <li><a href="#">Interactive Set Visualizer</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Section -->
+    <section id="practice" class="practice-section">
+        <div class="container">
+            <h2>Practice Problems</h2>
+            <p>Test your understanding with these practice problems. Click "Show Solution" to check your answers.</p>
+
+            <div class="practice-problems">
+                <div class="practice-problem">
+                    <h4>Problem 1: Set Membership</h4>
+                    <p>Given the set A = {1, 2, 3, 4, 5}, determine whether each statement is true or false:</p>
+                    <ol>
+                        <li>3 ∈ A</li>
+                        <li>6 ∈ A</li>
+                        <li>1 ∉ A</li>
+                    </ol>
+                    <button class="btn btn-outline show-solution-btn" data-problem="1">Show Solution</button>
+                    <div class="solution" id="solution-1" style="display: none;">
+                        <p><strong>Solutions:</strong></p>
+                        <ol>
+                            <li>True (3 is an element of A)</li>
+                            <li>False (6 is not an element of A)</li>
+                            <li>False (1 is an element of A, so it cannot be "not in" A)</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="practice-problem">
+                    <h4>Problem 2: Set Operations</h4>
+                    <p>Given A = {1, 2, 3, 4} and B = {3, 4, 5, 6}, compute:</p>
+                    <ol>
+                        <li>A ∪ B</li>
+                        <li>A ∩ B</li>
+                        <li>A - B</li>
+                        <li>B - A</li>
+                    </ol>
+                    <button class="btn btn-outline show-solution-btn" data-problem="2">Show Solution</button>
+                    <div class="solution" id="solution-2" style="display: none;">
+                        <p><strong>Solutions:</strong></p>
+                        <ol>
+                            <li>{1, 2, 3, 4, 5, 6}</li>
+                            <li>{3, 4}</li>
+                            <li>{1, 2}</li>
+                            <li>{5, 6}</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="practice-problem">
+                    <h4>Problem 3: Power Set</h4>
+                    <p>Find the power set of A = {x, y}.</p>
+                    <button class="btn btn-outline show-solution-btn" data-problem="3">Show Solution</button>
+                    <div class="solution" id="solution-3" style="display: none;">
+                        <p><strong>Solution:</strong> P(A) = {∅, {x}, {y}, {x, y}}</p>
+                        <p>The power set contains all possible subsets of A.</p>
+                    </div>
+                </div>
+
+                <div class="practice-problem">
+                    <h4>Problem 4: Set Relationships</h4>
+                    <p>Given A = {1, 2}, B = {1, 2, 3}, and C = {2, 3}, determine the relationship between each pair:</p>
+                    <ol>
+                        <li>A and B</li>
+                        <li>A and C</li>
+                        <li>B and C</li>
+                    </ol>
+                    <button class="btn btn-outline show-solution-btn" data-problem="4">Show Solution</button>
+                    <div class="solution" id="solution-4" style="display: none;">
+                        <p><strong>Solutions:</strong></p>
+                        <ol>
+                            <li>A ⊂ B (A is a proper subset of B)</li>
+                            <li>A and C are disjoint (A ∩ C = ∅)</li>
+                            <li>C ⊂ B (C is a proper subset of B)</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="practice-problem">
+                    <h4>Problem 5: Cardinality</h4>
+                    <p>Compute the cardinality of each set:</p>
+                    <ol>
+                        <li>∅</li>
+                        <li>{∅}</li>
+                        <li>P({1, 2, 3})</li>
+                    </ol>
+                    <button class="btn btn-outline show-solution-btn" data-problem="5">Show Solution</button>
+                    <div class="solution" id="solution-5" style="display: none;">
+                        <p><strong>Solutions:</strong></p>
+                        <ol>
+                            <li>|∅| = 0</li>
+                            <li>|{∅}| = 1 (singleton set containing the empty set)</li>
+                            <li>|P({1, 2, 3})| = 2³ = 8</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="practice-problem">
+                    <h4>Problem 6: Computer Science Application</h4>
+                    <p>In a database, users can have multiple roles. If User A has roles {admin, editor} and User B has roles {editor, viewer}, what roles do they have in common? What roles does User A have that User B doesn't?</p>
+                    <button class="btn btn-outline show-solution-btn" data-problem="6">Show Solution</button>
+                    <div class="solution" id="solution-6" style="display: none;">
+                        <p><strong>Solutions:</strong></p>
+                        <p>Common roles (intersection): {admin, editor} ∩ {editor, viewer} = {editor}</p>
+                        <p>Roles unique to User A (difference): {admin, editor} - {editor, viewer} = {admin}</p>
+                        <p>This demonstrates how set operations are used in access control systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module Completion -->
+    <section id="next" class="module-completion">
+        <div class="container">
+            <div class="completion-content">
+                <h2>🎉 Module Complete!</h2>
+                <p>Congratulations on completing Module 1: Introduction to Sets! You've learned the fundamental concepts of set theory that form the basis of discrete mathematics.</p>
+
+                <div class="completion-stats">
+                    <div class="stat">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Lessons Completed</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">6</div>
+                        <div class="stat-label">Problems Solved</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">10</div>
+                        <div class="stat-label">XP Earned</div>
+                    </div>
+                </div>
+
+                <div class="next-steps">
+                    <h3>What's Next?</h3>
+                    <div class="next-module">
+                        <div class="next-module-content">
+                            <h4>Module 2: Relations and Functions</h4>
+                            <p>Learn about relationships between sets and mathematical functions.</p>
+                            <div class="next-meta">
+                                <span>⏱️ 45-60 minutes</span>
+                                <span>📖 3 lessons</span>
+                                <span>🎯 6 practice problems</span>
+                            </div>
+                        </div>
+                        <a href="module-2.html" class="btn btn-primary">Start Module 2</a>
+                    </div>
+                </div>
+
+                <div class="completion-actions">
+                    <a href="../../discrete-math.html" class="btn btn-outline">Review Course Overview</a>
+                    <a href="../start-learning.html" class="btn btn-outline">Back to Learning Path</a>
+                    <button class="btn btn-primary" onclick="shareProgress()">Share Progress</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Software Engineering Mathematics</h4>
+                    <p>A comprehensive mathematics curriculum for software engineering students.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Module 1</h4>
+                    <ul>
+                        <li><a href="#content">Content</a></li>
+                        <li><a href="#practice">Practice</a></li>
+                        <li><a href="#next">Next Steps</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../discrete-math.html">Course Page</a></li>
+                        <li><a href="#">Practice Problems</a></li>
+                        <li><a href="#">Interactive Tools</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Software Engineering Mathematics. Built with ❤️ for the software engineering community.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../../js/main.js"></script>
+    <script src="../../../js/module-tracker.js"></script>
+</body>
+</html>

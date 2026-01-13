@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculus - Software Engineering Mathematics</title>
+    <meta name="description" content="Master calculus fundamentals essential for software engineering and algorithm analysis">
+    <meta name="keywords" content="calculus, limits, derivatives, integrals, multivariable calculus, software engineering">
+    <meta name="author" content="Software Engineering Mathematics">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Calculus - Software Engineering Mathematics">
+    <meta property="og:description" content="Master calculus fundamentals essential for software engineering and algorithm analysis">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Puppertino CSS Framework -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codedgar/Puppertino@latest/dist/css/newfull.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/custom.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- MathJax for mathematical expressions -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <a href="../index.html">
+                    <h1>Software Engineering Mathematics</h1>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <a href="../index.html" class="navbar-item">Home</a>
+                <a href="#overview" class="navbar-item active">Overview</a>
+                <a href="#topics" class="navbar-item">Topics</a>
+                <a href="#practice" class="navbar-item">Practice</a>
+            </div>
+            <div class="navbar-toggle">
+                <button class="btn btn-icon" id="theme-toggle">
+                    <span class="icon">🌙</span>
+                </button>
+                <button class="btn btn-icon" id="menu-toggle">
+                    <span class="icon">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <div class="page-icon">📐</div>
+                <h1>Calculus</h1>
+                <p class="page-subtitle">The mathematics of change and accumulation for algorithm analysis and optimization</p>
+                <div class="page-meta">
+                    <span class="meta-item">📖 11 Topics</span>
+                    <span class="meta-item">🎯 33 Practice Problems</span>
+                    <span class="meta-item">⏱️ 12-15 hours</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-main">
+                    <h2>Course Overview</h2>
+                    <p>Calculus provides the mathematical tools for understanding rates of change, optimization, and accumulation. In software engineering, these concepts are crucial for algorithm analysis, machine learning optimization, numerical methods, and understanding computational complexity.</p>
+
+                    <div class="learning-objectives">
+                        <h3>🎯 Learning Objectives</h3>
+                        <ul>
+                            <li>Master limits, continuity, and the foundations of calculus</li>
+                            <li>Understand differentiation and its applications in optimization</li>
+                            <li>Learn integration techniques and the Fundamental Theorem</li>
+                            <li>Apply multivariable calculus to higher-dimensional problems</li>
+                            <li>Connect calculus concepts to software engineering applications</li>
+                        </ul>
+                    </div>
+
+                    <div class="prerequisites">
+                        <h3>📋 Prerequisites</h3>
+                        <ul>
+                            <li>Algebra and trigonometry</li>
+                            <li>Basic function concepts</li>
+                            <li>Mathematical reasoning skills</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-sidebar">
+                    <div class="card">
+                        <h4>Course Structure</h4>
+                        <ul class="course-structure">
+                            <li><a href="#single-variable">Single Variable Calculus</a></li>
+                            <li><a href="#multivariable">Multivariable Calculus</a></li>
+                            <li><a href="#applications">Applications in CS</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4>Quick Progress</h4>
+                        <div class="progress-tracker">
+                            <div class="progress-item completed">
+                                <span class="progress-icon">✓</span>
+                                <span>Limits & Continuity</span>
+                            </div>
+                            <div class="progress-item current">
+                                <span class="progress-icon">○</span>
+                                <span>Differentiation</span>
+                            </div>
+                            <div class="progress-item">
+                                <span class="progress-icon">○</span>
+                                <span>Integration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics Section -->
+    <section id="topics" class="topics-section">
+        <div class="container">
+            <h2>Course Topics</h2>
+
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">🎯</div>
+                        <h3>Limits</h3>
+                    </div>
+                    <p>Understanding limits, continuity, and the foundation of calculus.</p>
+                    <div class="topic-meta">
+                        <span>📖 2 lessons</span>
+                        <span>🎯 3 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">📈</div>
+                        <h3>Continuity</h3>
+                    </div>
+                    <p>Properties of continuous functions and their importance in computation.</p>
+                    <div class="topic-meta">
+                        <span>📖 1 lesson</span>
+                        <span>🎯 3 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">⚡</div>
+                        <h3>Differentiation</h3>
+                    </div>
+                    <p>Derivatives, rules of differentiation, and rates of change.</p>
+                    <div class="topic-meta">
+                        <span>📖 3 lessons</span>
+                        <span>🎯 6 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">🔍</div>
+                        <h3>Applications of Derivatives</h3>
+                    </div>
+                    <p>Optimization, curve sketching, and related rates problems.</p>
+                    <div class="topic-meta">
+                        <span>📖 2 lessons</span>
+                        <span>🎯 6 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">∫</div>
+                        <h3>Integration</h3>
+                    </div>
+                    <p>Antiderivatives, definite integrals, and integration techniques.</p>
+                    <div class="topic-meta">
+                        <span>📖 3 lessons</span>
+                        <span>🎯 6 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">🔗</div>
+                        <h3>Fundamental Theorem of Calculus</h3>
+                    </div>
+                    <p>The connection between differentiation and integration.</p>
+                    <div class="topic-meta">
+                        <span>📖 1 lesson</span>
+                        <span>🎯 3 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">🌐</div>
+                        <h3>Partial Derivatives</h3>
+                    </div>
+                    <p>Multivariable functions and partial differentiation.</p>
+                    <div class="topic-meta">
+                        <span>📖 2 lessons</span>
+                        <span>🎯 3 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">📊</div>
+                        <h3>Gradient, Divergence, Curl</h3>
+                    </div>
+                    <p>Vector calculus operators and their applications.</p>
+                    <div class="topic-meta">
+                        <span>📖 2 lessons</span>
+                        <span>🎯 3 problems</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="application-section">
+                <h3>💡 Applications in Software Engineering</h3>
+                <div class="application-grid">
+                    <div class="application-card">
+                        <h4>Algorithm Analysis</h4>
+                        <p>Understanding Big O notation and asymptotic complexity using limits and rates of change.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Machine Learning Optimization</h4>
+                        <p>Gradient descent algorithms rely on partial derivatives and optimization techniques.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Numerical Methods</h4>
+                        <p>Integration and differentiation form the basis of numerical computation methods.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Computer Graphics</h4>
+                        <p>Curves, surfaces, and transformations use parametric equations and vector calculus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Section -->
+    <section id="practice" class="practice-section">
+        <div class="container">
+            <h2>Practice Problems</h2>
+
+            <div class="practice-grid">
+                <div class="practice-category">
+                    <h3>Limits</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: Limit Definition</h4>
+                            <p>Define the concept of a limit and explain its purpose in calculus.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: Computing Limits</h4>
+                            <p>Apply the concept to compute \(\lim_{x \to 2} \frac{x^2 - 4}{x - 2}\).</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: Limit Properties</h4>
+                            <p>Analyze and prove properties related to limits of functions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-category">
+                    <h3>Continuity</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: Continuity Definition</h4>
+                            <p>Define continuity and explain why it's important in mathematics.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: Continuity Testing</h4>
+                            <p>Apply continuity concepts to analyze \(f(x) = \frac{x^2 - 1}{x - 1}\).</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: Continuity Proofs</h4>
+                            <p>Prove theorems about continuous functions on intervals.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-category">
+                    <h3>Differentiation</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: Derivative Definition</h4>
+                            <p>Define the derivative and explain its geometric interpretation.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: Differentiation Rules</h4>
+                            <p>Apply product rule, quotient rule, and chain rule to compute derivatives.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: Implicit Differentiation</h4>
+                            <p>Use implicit differentiation to find \(\frac{dy}{dx}\) for complex equations.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-category">
+                    <h3>Integration</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: Antiderivatives</h4>
+                            <p>Find antiderivatives of basic functions and understand the integration process.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: Definite Integrals</h4>
+                            <p>Compute definite integrals and understand their geometric interpretation.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: Integration Techniques</h4>
+                            <p>Apply substitution, integration by parts, and trigonometric substitution.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-category">
+                    <h3>Multivariable Calculus</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: Partial Derivatives</h4>
+                            <p>Compute partial derivatives of multivariable functions.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: Gradient Vectors</h4>
+                            <p>Find gradient vectors and understand their geometric meaning.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: Lagrange Multipliers</h4>
+                            <p>Apply constrained optimization using Lagrange multipliers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Software Engineering Mathematics</h4>
+                    <p>A comprehensive mathematics curriculum for software engineering students.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#topics">Topics</a></li>
+                        <li><a href="#practice">Practice</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Related Courses</h4>
+                    <ul>
+                        <li><a href="discrete-math.html">Discrete Mathematics</a></li>
+                        <li><a href="linear-algebra.html">Linear Algebra</a></li>
+                        <li><a href="probability.html">Probability & Statistics</a></li>
+                        <li><a href="algorithms.html">Algorithms & Complexity</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Software Engineering Mathematics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

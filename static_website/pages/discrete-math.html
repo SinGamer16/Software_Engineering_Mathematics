@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discrete Mathematics - Software Engineering Mathematics</title>
+    <meta name="description" content="Learn discrete mathematics fundamentals essential for software engineering">
+    <meta name="keywords" content="discrete mathematics, sets, logic, functions, combinatorics, software engineering">
+    <meta name="author" content="Software Engineering Mathematics">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Discrete Mathematics - Software Engineering Mathematics">
+    <meta property="og:description" content="Learn discrete mathematics fundamentals essential for software engineering">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Puppertino CSS Framework -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codedgar/Puppertino@latest/dist/css/newfull.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/custom.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- MathJax for mathematical expressions -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <a href="../index.html">
+                    <h1>Software Engineering Mathematics</h1>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <a href="../index.html" class="navbar-item">Home</a>
+                <a href="#overview" class="navbar-item active">Overview</a>
+                <a href="#topics" class="navbar-item">Topics</a>
+                <a href="#practice" class="navbar-item">Practice</a>
+            </div>
+            <div class="navbar-toggle">
+                <button class="btn btn-icon" id="theme-toggle">
+                    <span class="icon">🌙</span>
+                </button>
+                <button class="btn btn-icon" id="menu-toggle">
+                    <span class="icon">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <div class="page-icon">📚</div>
+                <h1>Discrete Mathematics</h1>
+                <p class="page-subtitle">The mathematical foundation of computer science and software engineering</p>
+                <div class="page-meta">
+                    <span class="meta-item">📖 12 Topics</span>
+                    <span class="meta-item">🎯 45 Practice Problems</span>
+                    <span class="meta-item">⏱️ 8-10 hours</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-main">
+                    <h2>Course Overview</h2>
+                    <p>Discrete Mathematics provides the essential mathematical foundation for computer science and software engineering. This course covers the fundamental concepts that underpin algorithms, data structures, cryptography, and many other areas of computing.</p>
+
+                    <div class="learning-objectives">
+                        <h3>🎯 Learning Objectives</h3>
+                        <ul>
+                            <li>Understand fundamental discrete mathematical concepts</li>
+                            <li>Apply mathematical thinking to solve computational problems</li>
+                            <li>Master logic, sets, functions, and relations</li>
+                            <li>Develop proof techniques for algorithm analysis</li>
+                            <li>Connect discrete math to real software engineering applications</li>
+                        </ul>
+                    </div>
+
+                    <div class="prerequisites">
+                        <h3>📋 Prerequisites</h3>
+                        <ul>
+                            <li>Basic algebra and arithmetic</li>
+                            <li>Mathematical reasoning skills</li>
+                            <li>No prior programming experience required</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-sidebar">
+                    <div class="card">
+                        <h4>Course Structure</h4>
+                        <ul class="course-structure">
+                            <li><a href="#sets">Sets and Relations</a></li>
+                            <li><a href="#logic">Logic and Proofs</a></li>
+                            <li><a href="#functions">Functions</a></li>
+                            <li><a href="#combinatorics">Combinatorics</a></li>
+                            <li><a href="#graphs">Graph Theory Basics</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4>Quick Progress</h4>
+                        <div class="progress-tracker">
+                            <div class="progress-item completed">
+                                <span class="progress-icon">✓</span>
+                                <span>Sets & Relations</span>
+                            </div>
+                            <div class="progress-item current">
+                                <span class="progress-icon">○</span>
+                                <span>Logic & Proofs</span>
+                            </div>
+                            <div class="progress-item">
+                                <span class="progress-icon">○</span>
+                                <span>Functions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics Section -->
+    <section id="topics" class="topics-section">
+        <div class="container">
+            <h2>Course Topics</h2>
+
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">🔢</div>
+                        <h3>Sets and Relations</h3>
+                    </div>
+                    <p>Understanding sets, subsets, power sets, and relations between elements.</p>
+                    <div class="topic-meta">
+                        <span>📖 3 lessons</span>
+                        <span>🎯 12 problems</span>
+                    </div>
+                    <a href="learn/discrete-math/module-1.html" class="btn btn-outline">Start Learning</a>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">🧠</div>
+                        <h3>Logic and Proofs</h3>
+                    </div>
+                    <p>Propositional logic, predicate logic, and mathematical proof techniques.</p>
+                    <div class="topic-meta">
+                        <span>📖 4 lessons</span>
+                        <span>🎯 15 problems</span>
+                    </div>
+                    <button class="btn btn-outline" disabled>Coming Soon</button>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">📈</div>
+                        <h3>Functions</h3>
+                    </div>
+                    <p>Function properties, composition, inverses, and bijections.</p>
+                    <div class="topic-meta">
+                        <span>📖 3 lessons</span>
+                        <span>🎯 10 problems</span>
+                    </div>
+                    <button class="btn btn-outline" disabled>Coming Soon</button>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">🔀</div>
+                        <h3>Combinatorics</h3>
+                    </div>
+                    <p>Permutations, combinations, and counting principles.</p>
+                    <div class="topic-meta">
+                        <span>📖 2 lessons</span>
+                        <span>🎯 8 problems</span>
+                    </div>
+                    <button class="btn btn-outline" disabled>Coming Soon</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Section -->
+    <section id="practice" class="practice-section">
+        <div class="container">
+            <h2>Practice Problems</h2>
+            <p>Test your understanding with interactive problems and detailed solutions.</p>
+
+            <div class="practice-grid">
+                <div class="practice-card">
+                    <h4>Problem 1: Set Operations</h4>
+                    <p>Given sets A = {1, 2, 3} and B = {2, 3, 4}, find A ∪ B and A ∩ B.</p>
+                    <button class="btn btn-primary" onclick="showSolution(1)">Show Solution</button>
+                    <div id="solution-1" class="solution" style="display: none;">
+                        <p><strong>Solution:</strong></p>
+                        <p>A ∪ B = {1, 2, 3, 4}</p>
+                        <p>A ∩ B = {2, 3}</p>
+                    </div>
+                </div>
+
+                <div class="practice-card">
+                    <h4>Problem 2: Logic Simplification</h4>
+                    <p>Simplify the expression: ¬(P ∧ Q) ∨ (P ∧ ¬Q)</p>
+                    <button class="btn btn-primary" onclick="showSolution(2)">Show Solution</button>
+                    <div id="solution-2" class="solution" style="display: none;">
+                        <p><strong>Solution:</strong></p>
+                        <p>¬(P ∧ Q) ∨ (P ∧ ¬Q) = ¬P ∨ ¬Q ∨ P ∧ ¬Q</p>
+                        <p>= (¬P ∨ P) ∧ (¬P ∨ ¬Q) ∨ ¬Q</p>
+                        <p>= T ∧ (¬P ∨ ¬Q) ∨ ¬Q</p>
+                        <p>= ¬P ∨ ¬Q</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Software Engineering Mathematics</h4>
+                    <p>A comprehensive mathematics curriculum for software engineering students.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#topics">Topics</a></li>
+                        <li><a href="#practice">Practice</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">All Courses</a></li>
+                        <li><a href="#">Practice Problems</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Software Engineering Mathematics. Built with ❤️ for the software engineering community.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Puppertino JavaScript -->
+    <script src="https://cdn.jsdelivr.net/gh/codedgar/Puppertino@latest/dist/js/darkmode_manager.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/codedgar/Puppertino@latest/dist/js/modals.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/codedgar/Puppertino@latest/dist/js/tabs.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="../js/main.js"></script>
+    <script>
+        // Page-specific JavaScript
+        function showSolution(problemNumber) {
+            const solution = document.getElementById(`solution-${problemNumber}`);
+            solution.style.display = solution.style.display === 'none' ? 'block' : 'none';
+        }
+
+        // Initialize page-specific features
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add any page-specific initialization here
+        });
+    </script>
+</body>
+</html>

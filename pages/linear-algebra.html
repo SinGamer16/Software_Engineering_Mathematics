@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Algebra - Software Engineering Mathematics</title>
+    <meta name="description" content="Master vectors, matrices, linear transformations, and their applications in computer science">
+    <meta name="keywords" content="linear algebra, vectors, matrices, transformations, eigenvalues, computer graphics">
+    <meta name="author" content="Software Engineering Mathematics">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Linear Algebra - Software Engineering Mathematics">
+    <meta property="og:description" content="Master vectors, matrices, linear transformations, and their applications in computer science">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Puppertino CSS Framework -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codedgar/Puppertino@latest/dist/css/newfull.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/custom.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- MathJax for mathematical expressions -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <a href="../index.html">
+                    <h1>Software Engineering Mathematics</h1>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <a href="../index.html" class="navbar-item">Home</a>
+                <a href="#overview" class="navbar-item active">Overview</a>
+                <a href="#vectors" class="navbar-item">Vectors</a>
+                <a href="#matrices" class="navbar-item">Matrices</a>
+                <a href="#transformations" class="navbar-item">Transformations</a>
+                <a href="#applications" class="navbar-item">Applications</a>
+            </div>
+            <div class="navbar-toggle">
+                <button class="btn btn-icon" id="theme-toggle">
+                    <span class="icon">🌙</span>
+                </button>
+                <button class="btn btn-icon" id="menu-toggle">
+                    <span class="icon">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <div class="page-icon">📐</div>
+                <h1>Linear Algebra</h1>
+                <p class="page-subtitle">The mathematics of vectors, matrices, and transformations</p>
+                <div class="page-meta">
+                    <span class="meta-item">🔢 18 Topics</span>
+                    <span class="meta-item">🎯 75 Practice Problems</span>
+                    <span class="meta-item">⏱️ 15-18 hours</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-main">
+                    <h2>Course Overview</h2>
+                    <p>Linear Algebra is fundamental to computer graphics, machine learning, data science, and many areas of computer science. This course provides a comprehensive introduction to vectors, matrices, linear transformations, and their applications.</p>
+
+                    <div class="learning-objectives">
+                        <h3>🎯 Learning Objectives</h3>
+                        <ul>
+                            <li>Master vector operations and properties</li>
+                            <li>Understand matrix algebra and operations</li>
+                            <li>Work with linear transformations and their matrices</li>
+                            <li>Apply linear algebra to solve systems of equations</li>
+                            <li>Understand eigenvalues, eigenvectors, and diagonalization</li>
+                            <li>Apply linear algebra concepts to computer science problems</li>
+                        </ul>
+                    </div>
+
+                    <div class="prerequisites">
+                        <h3>📋 Prerequisites</h3>
+                        <ul>
+                            <li>Basic algebra and arithmetic</li>
+                            <li>Some calculus (helpful but not required)</li>
+                            <li>Mathematical reasoning skills</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-sidebar">
+                    <div class="card">
+                        <h4>Course Structure</h4>
+                        <ul class="course-structure">
+                            <li><a href="#vectors">Vectors and Vector Spaces</a></li>
+                            <li><a href="#matrices">Matrices and Operations</a></li>
+                            <li><a href="#transformations">Linear Transformations</a></li>
+                            <li><a href="#eigenvalues">Eigenvalues & Eigenvectors</a></li>
+                            <li><a href="#applications">Applications in CS</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4>Key Applications</h4>
+                        <div class="application-tags">
+                            <span class="tag">Computer Graphics</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Data Science</span>
+                            <span class="tag">Cryptography</span>
+                            <span class="tag">Optimization</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vectors Section -->
+    <section id="vectors" class="topics-section">
+        <div class="container">
+            <h2>Vectors and Vector Spaces</h2>
+
+            <div class="vectors-grid">
+                <div class="vector-card">
+                    <h3>Vector Operations</h3>
+                    <div class="operation-examples">
+                        <div class="operation">
+                            <h4>Addition</h4>
+                            <p>\( \vec{a} + \vec{b} = (a_1 + b_1, a_2 + b_2, \dots, a_n + b_n) \)</p>
+                        </div>
+                        <div class="operation">
+                            <h4>Scalar Multiplication</h4>
+                            <p>\( c\vec{v} = (c v_1, c v_2, \dots, c v_n) \)</p>
+                        </div>
+                        <div class="operation">
+                            <h4>Dot Product</h4>
+                            <p>\( \vec{a} \cdot \vec{b} = a_1 b_1 + a_2 b_2 + \dots + a_n b_n \)</p>
+                        </div>
+                        <div class="operation">
+                            <h4>Cross Product (3D)</h4>
+                            <p>\( \vec{a} \times \vec{b} = (a_y b_z - a_z b_y, a_z b_x - a_x b_z, a_x b_y - a_y b_x) \)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vector-card">
+                    <h3>Vector Spaces</h3>
+                    <p>A vector space V over a field F is a set with two operations:</p>
+                    <ul>
+                        <li><strong>Vector addition:</strong> V × V → V</li>
+                        <li><strong>Scalar multiplication:</strong> F × V → V</li>
+                    </ul>
+                    <p>That satisfy the eight vector space axioms.</p>
+
+                    <div class="examples">
+                        <h4>Examples of Vector Spaces</h4>
+                        <ul>
+                            <li>\( \mathbb{R}^n \) - n-tuples of real numbers</li>
+                            <li>\( \mathbb{C}^n \) - n-tuples of complex numbers</li>
+                            <li>P_n - polynomials of degree ≤ n</li>
+                            <li>M_{m×n} - m×n matrices</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Matrices Section -->
+    <section id="matrices" class="content-section">
+        <div class="container">
+            <h2>Matrices and Operations</h2>
+
+            <div class="matrices-grid">
+                <div class="matrix-card">
+                    <h3>Matrix Operations</h3>
+                    <div class="matrix-operations">
+                        <div class="operation">
+                            <h4>Addition</h4>
+                            <p>\( (A + B)_{ij} = A_{ij} + B_{ij} \)</p>
+                        </div>
+                        <div class="operation">
+                            <h4>Multiplication</h4>
+                            <p>\( (AB)_{ij} = \sum_k A_{ik} B_{kj} \)</p>
+                        </div>
+                        <div class="operation">
+                            <h4>Transpose</h4>
+                            <p>\( (A^T)_{ij} = A_{ji} \)</p>
+                        </div>
+                        <div class="operation">
+                            <h4>Inverse</h4>
+                            <p>\( A^{-1} A = A A^{-1} = I \)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="matrix-card">
+                    <h3>Special Matrices</h3>
+                    <table class="matrix-types">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Properties</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Identity (I)</td>
+                                <td>AI = IA = A</td>
+                                <td>\( \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} \)</td>
+                            </tr>
+                            <tr>
+                                <td>Zero (0)</td>
+                                <td>All entries = 0</td>
+                                <td>\( \begin{pmatrix} 0 & 0 \\ 0 & 0 \end{pmatrix} \)</td>
+                            </tr>
+                            <tr>
+                                <td>Diagonal</td>
+                                <td>Non-zero only on diagonal</td>
+                                <td>\( \begin{pmatrix} 2 & 0 \\ 0 & 3 \end{pmatrix} \)</td>
+                            </tr>
+                            <tr>
+                                <td>Orthogonal</td>
+                                <td>A^T A = I</td>
+                                <td>Rotation matrices</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transformations Section -->
+    <section id="transformations" class="topics-section">
+        <div class="container">
+            <h2>Linear Transformations</h2>
+
+            <div class="transformations-grid">
+                <div class="transformation-card">
+                    <h3>Definition</h3>
+                    <p>A linear transformation T: V → W is a function that satisfies:</p>
+                    <ul>
+                        <li><strong>Additivity:</strong> T(u + v) = T(u) + T(v)</li>
+                        <li><strong>Homogeneity:</strong> T(cv) = cT(v)</li>
+                    </ul>
+                    <p>Every linear transformation has a unique matrix representation.</p>
+                </div>
+
+                <div class="transformation-card">
+                    <h3>Common Transformations</h3>
+                    <div class="transformation-examples">
+                        <div class="example">
+                            <h4>Rotation</h4>
+                            <p>\( \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix} \)</p>
+                        </div>
+                        <div class="example">
+                            <h4>Scaling</h4>
+                            <p>\( \begin{pmatrix} s_x & 0 \\ 0 & s_y \end{pmatrix} \)</p>
+                        </div>
+                        <div class="example">
+                            <h4>Shear</h4>
+                            <p>\( \begin{pmatrix} 1 & k \\ 0 & 1 \end{pmatrix} \)</p>
+                        </div>
+                        <div class="example">
+                            <h4>Reflection</h4>
+                            <p>\( \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} \)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications Section -->
+    <section id="applications" class="content-section">
+        <div class="container">
+            <h2>Applications in Computer Science</h2>
+
+            <div class="applications-grid">
+                <div class="application-card">
+                    <div class="app-header">
+                        <div class="app-icon">🎨</div>
+                        <h3>Computer Graphics</h3>
+                    </div>
+                    <ul>
+                        <li>3D transformations and projections</li>
+                        <li>Coordinate system conversions</li>
+                        <li>Animation and modeling</li>
+                        <li>Rendering pipelines</li>
+                    </ul>
+                </div>
+
+                <div class="application-card">
+                    <div class="app-header">
+                        <div class="app-icon">🤖</div>
+                        <h3>Machine Learning</h3>
+                    </div>
+                    <ul>
+                        <li>Principal Component Analysis (PCA)</li>
+                        <li>Linear regression and classification</li>
+                        <li>Neural network weight matrices</li>
+                        <li>Singular Value Decomposition (SVD)</li>
+                    </ul>
+                </div>
+
+                <div class="application-card">
+                    <div class="app-header">
+                        <div class="app-icon">🔐</div>
+                        <h3>Cryptography</h3>
+                    </div>
+                    <ul>
+                        <li>RSA encryption (modular arithmetic)</li>
+                        <li>Hill cipher (matrix encryption)</li>
+                        <li>Diffie-Hellman key exchange</li>
+                        <li>Error-correcting codes</li>
+                    </ul>
+                </div>
+
+                <div class="application-card">
+                    <div class="app-header">
+                        <div class="app-icon">📊</div>
+                        <h3>Data Science</h3>
+                    </div>
+                    <ul>
+                        <li>Data transformation and normalization</li>
+                        <li>Feature extraction and selection</li>
+                        <li>Statistical analysis</li>
+                        <li>Recommendation systems</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Software Engineering Mathematics</h4>
+                    <p>A comprehensive mathematics curriculum for software engineering students.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#vectors">Vectors</a></li>
+                        <li><a href="#matrices">Matrices</a></li>
+                        <li><a href="#transformations">Transformations</a></li>
+                        <li><a href="#applications">Applications</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">All Courses</a></li>
+                        <li><a href="#">Practice Problems</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Software Engineering Mathematics. Built with ❤️ for the software engineering community.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Puppertino JavaScript -->
+    <script src="https://cdn.jsdelivr.net/gh/codedgar/Puppertino@latest/dist/js/darkmode_manager.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/codedgar/Puppertino@latest/dist/js/modals.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/codedgar/Puppertino@latest/dist/js/tabs.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

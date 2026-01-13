@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimization - Software Engineering Mathematics</title>
+    <meta name="description" content="Master optimization techniques for algorithm design and machine learning applications">
+    <meta name="keywords" content="optimization, algorithms, convex optimization, machine learning, software engineering">
+    <meta name="author" content="Software Engineering Mathematics">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Optimization - Software Engineering Mathematics">
+    <meta property="og:description" content="Master optimization techniques for algorithm design and machine learning applications">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Puppertino CSS Framework -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codedgar/Puppertino@latest/dist/css/newfull.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/custom.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- MathJax for mathematical expressions -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <a href="../index.html">
+                    <h1>Software Engineering Mathematics</h1>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <a href="../index.html" class="navbar-item">Home</a>
+                <a href="#overview" class="navbar-item active">Overview</a>
+                <a href="#topics" class="navbar-item">Topics</a>
+                <a href="#practice" class="navbar-item">Practice</a>
+            </div>
+            <div class="navbar-toggle">
+                <button class="btn btn-icon" id="theme-toggle">
+                    <span class="icon">🌙</span>
+                </button>
+                <button class="btn btn-icon" id="menu-toggle">
+                    <span class="icon">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <div class="page-icon">🎯</div>
+                <h1>Optimization</h1>
+                <p class="page-subtitle">Finding optimal solutions in algorithm design and machine learning</p>
+                <div class="page-meta">
+                    <span class="meta-item">📖 5 Topics</span>
+                    <span class="meta-item">🎯 15 Practice Problems</span>
+                    <span class="meta-item">⏱️ 8-10 hours</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-main">
+                    <h2>Course Overview</h2>
+                    <p>Optimization provides the mathematical foundation for finding optimal solutions to complex problems. From algorithm design to machine learning training, optimization techniques are essential for building efficient software systems that can make intelligent decisions and solve real-world problems.</p>
+
+                    <div class="learning-objectives">
+                        <h3>🎯 Learning Objectives</h3>
+                        <ul>
+                            <li>Master unconstrained and constrained optimization</li>
+                            <li>Understand convex optimization theory</li>
+                            <li>Apply gradient-based optimization algorithms</li>
+                            <li>Analyze algorithm convergence and complexity</li>
+                            <li>Connect optimization to machine learning applications</li>
+                        </ul>
+                    </div>
+
+                    <div class="prerequisites">
+                        <h3>📋 Prerequisites</h3>
+                        <ul>
+                            <li>Multivariable calculus</li>
+                            <li>Linear algebra</li>
+                            <li>Basic probability concepts</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-sidebar">
+                    <div class="card">
+                        <h4>Course Structure</h4>
+                        <ul class="course-structure">
+                            <li><a href="#unconstrained">Unconstrained Optimization</a></li>
+                            <li><a href="#constrained">Constrained Optimization</a></li>
+                            <li><a href="#algorithms">Optimization Algorithms</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4>Quick Progress</h4>
+                        <div class="progress-tracker">
+                            <div class="progress-item completed">
+                                <span class="progress-icon">✓</span>
+                                <span>Convex Functions</span>
+                            </div>
+                            <div class="progress-item current">
+                                <span class="progress-icon">○</span>
+                                <span>Gradient Methods</span>
+                            </div>
+                            <div class="progress-item">
+                                <span class="progress-icon">○</span>
+                                <span>Lagrange Multipliers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics Section -->
+    <section id="topics" class="topics-section">
+        <div class="container">
+            <h2>Course Topics</h2>
+
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">📈</div>
+                        <h3>Unconstrained Optimization</h3>
+                    </div>
+                    <p>Local and global optima, convexity, and optimality conditions.</p>
+                    <div class="topic-meta">
+                        <span>📖 2 lessons</span>
+                        <span>🎯 3 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">🔗</div>
+                        <h3>Constrained Optimization</h3>
+                    </div>
+                    <p>Lagrange multipliers, KKT conditions, and constraint qualifications.</p>
+                    <div class="topic-meta">
+                        <span>📖 3 lessons</span>
+                        <span>🎯 6 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">⚡</div>
+                        <h3>Gradient-Based Methods</h3>
+                    </div>
+                    <p>Steepest descent, conjugate gradient, and Newton's method.</p>
+                    <div class="topic-meta">
+                        <span>📖 3 lessons</span>
+                        <span>🎯 6 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">🎲</div>
+                        <h3>Stochastic Optimization</h3>
+                    </div>
+                    <p>Expected value optimization and stochastic gradient methods.</p>
+                    <div class="topic-meta">
+                        <span>📖 2 lessons</span>
+                        <span>🎯 3 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">🔍</div>
+                        <h3>Convex Optimization</h3>
+                    </div>
+                    <p>Convex sets, functions, and optimization problems.</p>
+                    <div class="topic-meta">
+                        <span>📖 3 lessons</span>
+                        <span>🎯 6 problems</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="application-section">
+                <h3>💡 Applications in Software Engineering</h3>
+                <div class="application-grid">
+                    <div class="application-card">
+                        <h4>Machine Learning Training</h4>
+                        <p>Gradient descent and variants power neural network training algorithms.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Compiler Optimization</h4>
+                        <p>Code optimization uses constraint-based techniques to improve performance.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Resource Allocation</h4>
+                        <p>Linear programming optimizes resource distribution in distributed systems.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Search Algorithms</h4>
+                        <p>A* and other heuristic search methods use optimization principles.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Operations Research</h4>
+                        <p>Supply chain and logistics optimization use linear and nonlinear programming.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Portfolio Optimization</h4>
+                        <p>Financial algorithms use optimization to balance risk and return.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Section -->
+    <section id="practice" class="practice-section">
+        <div class="container">
+            <h2>Practice Problems</h2>
+
+            <div class="practice-grid">
+                <div class="practice-category">
+                    <h3>Unconstrained Optimization</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: Optimality Conditions</h4>
+                            <p>Define local and global optima and explain first-order optimality conditions.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: Second Derivatives</h4>
+                            <p>Apply second-order conditions to classify critical points as maxima or minima.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: Convexity Analysis</h4>
+                            <p>Analyze convexity properties and their relationship to optimization.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-category">
+                    <h3>Constrained Optimization</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: Lagrange Multipliers</h4>
+                            <p>Define Lagrange multipliers and explain their geometric interpretation.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: KKT Conditions</h4>
+                            <p>Apply Karush-Kuhn-Tucker conditions to solve constrained optimization problems.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: Constraint Qualifications</h4>
+                            <p>Analyze different constraint qualification conditions and their implications.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-category">
+                    <h3>Gradient Methods</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: Steepest Descent</h4>
+                            <p>Define steepest descent method and explain its convergence properties.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: Newton's Method</h4>
+                            <p>Apply Newton's method and analyze its quadratic convergence rate.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: Conjugate Gradient</h4>
+                            <p>Implement conjugate gradient method for large-scale optimization problems.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-category">
+                    <h3>Stochastic Optimization</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: Expected Value</h4>
+                            <p>Define expected value optimization and explain stochastic optimization.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: Stochastic Gradient</h4>
+                            <p>Apply stochastic gradient descent and analyze variance reduction techniques.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: Convergence Analysis</h4>
+                            <p>Prove convergence properties of stochastic optimization algorithms.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-category">
+                    <h3>Convex Optimization</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: Convex Sets</h4>
+                            <p>Define convex sets and functions and explain their properties.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: Duality Theory</h4>
+                            <p>Apply Lagrange duality to derive dual optimization problems.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: Strong Duality</h4>
+                            <p>Prove strong duality theorems for convex optimization problems.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Software Engineering Mathematics</h4>
+                    <p>A comprehensive mathematics curriculum for software engineering students.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#topics">Topics</a></li>
+                        <li><a href="#practice">Practice</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Related Courses</h4>
+                    <ul>
+                        <li><a href="numerical-methods.html">Numerical Methods</a></li>
+                        <li><a href="calculus.html">Calculus</a></li>
+                        <li><a href="linear-algebra.html">Linear Algebra</a></li>
+                        <li><a href="probability.html">Probability & Statistics</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Software Engineering Mathematics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

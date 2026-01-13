@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automata and Formal Languages - Software Engineering Mathematics</title>
+    <meta name="description" content="Master automata theory and formal languages for compiler design and computation theory">
+    <meta name="keywords" content="automata, formal languages, computability, compiler design, software engineering">
+    <meta name="author" content="Software Engineering Mathematics">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Automata and Formal Languages - Software Engineering Mathematics">
+    <meta property="og:description" content="Master automata theory and formal languages for compiler design and computation theory">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Puppertino CSS Framework -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codedgar/Puppertino@latest/dist/css/newfull.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/custom.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- MathJax for mathematical expressions -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <a href="../index.html">
+                    <h1>Software Engineering Mathematics</h1>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <a href="../index.html" class="navbar-item">Home</a>
+                <a href="#overview" class="navbar-item active">Overview</a>
+                <a href="#topics" class="navbar-item">Topics</a>
+                <a href="#practice" class="navbar-item">Practice</a>
+            </div>
+            <div class="navbar-toggle">
+                <button class="btn btn-icon" id="theme-toggle">
+                    <span class="icon">🌙</span>
+                </button>
+                <button class="btn btn-icon" id="menu-toggle">
+                    <span class="icon">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <div class="page-icon">🤖</div>
+                <h1>Automata and Formal Languages</h1>
+                <p class="page-subtitle">The theory of computation and formal language processing</p>
+                <div class="page-meta">
+                    <span class="meta-item">📖 6 Topics</span>
+                    <span class="meta-item">🎯 18 Practice Problems</span>
+                    <span class="meta-item">⏱️ 8-10 hours</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-main">
+                    <h2>Course Overview</h2>
+                    <p>Automata Theory and Formal Languages provide the theoretical foundation for understanding computation, language processing, and the limits of what computers can do. These concepts are essential for compiler design, pattern matching, and understanding computational complexity.</p>
+
+                    <div class="learning-objectives">
+                        <h3>🎯 Learning Objectives</h3>
+                        <ul>
+                            <li>Understand finite automata and regular languages</li>
+                            <li>Master context-free grammars and parsing</li>
+                            <li>Apply automata theory to practical problems</li>
+                            <li>Explore the limits of computation and decidability</li>
+                            <li>Connect theory to compiler design and language processing</li>
+                        </ul>
+                    </div>
+
+                    <div class="prerequisites">
+                        <h3>📋 Prerequisites</h3>
+                        <ul>
+                            <li>Discrete mathematics</li>
+                            <li>Set theory and logic</li>
+                            <li>Basic algorithm concepts</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-sidebar">
+                    <div class="card">
+                        <h4>Course Structure</h4>
+                        <ul class="course-structure">
+                            <li><a href="#automata">Finite Automata</a></li>
+                            <li><a href="#languages">Formal Languages</a></li>
+                            <li><a href="#computability">Computability</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4>Quick Progress</h4>
+                        <div class="progress-tracker">
+                            <div class="progress-item completed">
+                                <span class="progress-icon">✓</span>
+                                <span>Regular Languages</span>
+                            </div>
+                            <div class="progress-item current">
+                                <span class="progress-icon">○</span>
+                                <span>Context-Free Languages</span>
+                            </div>
+                            <div class="progress-item">
+                                <span class="progress-icon">○</span>
+                                <span>Turing Machines</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics Section -->
+    <section id="topics" class="topics-section">
+        <div class="container">
+            <h2>Course Topics</h2>
+
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">🔄</div>
+                        <h3>Finite Automata (DFA, NFA)</h3>
+                    </div>
+                    <p>Deterministic and non-deterministic finite automata for pattern recognition.</p>
+                    <div class="topic-meta">
+                        <span>📖 3 lessons</span>
+                        <span>🎯 6 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">📝</div>
+                        <h3>Regular Expressions</h3>
+                    </div>
+                    <p>Regular expressions and their equivalence to finite automata.</p>
+                    <div class="topic-meta">
+                        <span>📖 2 lessons</span>
+                        <span>🎯 3 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">🌳</div>
+                        <h3>Context-Free Grammars</h3>
+                    </div>
+                    <p>Grammar rules for context-free languages and parsing.</p>
+                    <div class="topic-meta">
+                        <span>📖 3 lessons</span>
+                        <span>🎯 6 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">📚</div>
+                        <h3>Pushdown Automata</h3>
+                    </div>
+                    <p>Stack-based automata for context-free language recognition.</p>
+                    <div class="topic-meta">
+                        <span>📖 2 lessons</span>
+                        <span>🎯 3 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">🧠</div>
+                        <h3>Turing Machines</h3>
+                    </div>
+                    <p>The theoretical model of computation and universal machines.</p>
+                    <div class="topic-meta">
+                        <span>📖 2 lessons</span>
+                        <span>🎯 3 problems</span>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div class="topic-icon">❓</div>
+                        <h3>Decidability and Computability</h3>
+                    </div>
+                    <p>The limits of what can be computed and decided algorithmically.</p>
+                    <div class="topic-meta">
+                        <span>📖 2 lessons</span>
+                        <span>🎯 3 problems</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="application-section">
+                <h3>💡 Applications in Software Engineering</h3>
+                <div class="application-grid">
+                    <div class="application-card">
+                        <h4>Compiler Design</h4>
+                        <p>Lexical analysis uses regular expressions and finite automata for token recognition.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Pattern Matching</h4>
+                        <p>Regular expressions power text search, validation, and string processing.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Parser Generators</h4>
+                        <p>Context-free grammars form the basis of parser generators like yacc and ANTLR.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Programming Languages</h4>
+                        <p>Language design uses formal grammars to define syntax and semantics.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Computational Complexity</h4>
+                        <p>Understanding decidability helps classify computational problems by complexity.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Verification Systems</h4>
+                        <p>Model checking and formal verification use automata theory principles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Section -->
+    <section id="practice" class="practice-section">
+        <div class="container">
+            <h2>Practice Problems</h2>
+
+            <div class="practice-grid">
+                <div class="practice-category">
+                    <h3>Finite Automata</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: DFA Definition</h4>
+                            <p>Define deterministic finite automata and explain their components.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: NFA to DFA</h4>
+                            <p>Apply the subset construction algorithm to convert NFAs to DFAs.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: Automata Minimization</h4>
+                            <p>Analyze and prove properties related to minimal automata constructions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-category">
+                    <h3>Regular Expressions</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: Regex Syntax</h4>
+                            <p>Define regular expressions and explain their operators and syntax.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: Regex to Automata</h4>
+                            <p>Apply algorithms to convert regular expressions to finite automata.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: Regular Language Properties</h4>
+                            <p>Prove closure properties and pumping lemma for regular languages.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-category">
+                    <h3>Context-Free Grammars</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: CFG Definition</h4>
+                            <p>Define context-free grammars and distinguish them from regular grammars.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: Parsing Techniques</h4>
+                            <p>Apply top-down and bottom-up parsing algorithms to context-free languages.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: Chomsky Normal Form</h4>
+                            <p>Convert grammars to normal forms and analyze parsing complexity.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-category">
+                    <h3>Pushdown Automata</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: PDA Definition</h4>
+                            <p>Define pushdown automata and explain their stack-based computation model.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: PDA Construction</h4>
+                            <p>Apply PDA construction algorithms for context-free language recognition.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: PDA Equivalence</h4>
+                            <p>Prove equivalence between pushdown automata and context-free grammars.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-category">
+                    <h3>Turing Machines</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: TM Definition</h4>
+                            <p>Define Turing machines and explain their computational model.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: TM Construction</h4>
+                            <p>Apply Turing machine construction for basic computational problems.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: Universal TM</h4>
+                            <p>Analyze the concept of universal Turing machines and their implications.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-category">
+                    <h3>Decidability</h3>
+                    <div class="practice-problems">
+                        <div class="practice-problem">
+                            <h4>Basic: Halting Problem</h4>
+                            <p>Define the halting problem and explain why it's undecidable.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Intermediate: Rice's Theorem</h4>
+                            <p>Apply Rice's theorem to classify undecidable problems about programs.</p>
+                        </div>
+                        <div class="practice-problem">
+                            <h4>Advanced: Reducibility</h4>
+                            <p>Use reduction techniques to prove undecidability of computational problems.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Software Engineering Mathematics</h4>
+                    <p>A comprehensive mathematics curriculum for software engineering students.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#topics">Topics</a></li>
+                        <li><a href="#practice">Practice</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Related Courses</h4>
+                    <ul>
+                        <li><a href="algorithms.html">Algorithms & Complexity</a></li>
+                        <li><a href="discrete-math.html">Discrete Mathematics</a></li>
+                        <li><a href="linear-algebra.html">Linear Algebra</a></li>
+                        <li><a href="probability.html">Probability & Statistics</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Software Engineering Mathematics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

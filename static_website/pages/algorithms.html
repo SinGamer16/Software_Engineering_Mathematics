@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithms and Complexity - Software Engineering Mathematics</title>
+    <meta name="description" content="Master algorithm analysis, complexity theory, and computational thinking">
+    <meta name="keywords" content="algorithms, complexity theory, big O notation, NP-complete, software engineering">
+    <meta name="author" content="Software Engineering Mathematics">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Algorithms and Complexity - Software Engineering Mathematics">
+    <meta property="og:description" content="Master algorithm analysis, complexity theory, and computational thinking">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Puppertino CSS Framework -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/codedgar/Puppertino@latest/dist/css/newfull.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/custom.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- MathJax for mathematical expressions -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <a href="../index.html">
+                    <h1>Software Engineering Mathematics</h1>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <a href="../index.html" class="navbar-item">Home</a>
+                <a href="#overview" class="navbar-item active">Overview</a>
+                <a href="#analysis" class="navbar-item">Analysis</a>
+                <a href="#complexity" class="navbar-item">Complexity</a>
+                <a href="#algorithms" class="navbar-item">Algorithms</a>
+            </div>
+            <div class="navbar-toggle">
+                <button class="btn btn-icon" id="theme-toggle">
+                    <span class="icon">🌙</span>
+                </button>
+                <button class="btn btn-icon" id="menu-toggle">
+                    <span class="icon">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <div class="page-icon">⚡</div>
+                <h1>Algorithms and Complexity</h1>
+                <p class="page-subtitle">Understanding computational efficiency and algorithm design</p>
+                <div class="page-meta">
+                    <span class="meta-item">📊 15 Topics</span>
+                    <span class="meta-item">🎯 60 Practice Problems</span>
+                    <span class="meta-item">⏱️ 12-15 hours</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-main">
+                    <h2>Course Overview</h2>
+                    <p>Algorithms and Complexity Theory form the backbone of computer science. This course teaches you how to analyze algorithms, understand computational complexity, and design efficient solutions to computational problems.</p>
+
+                    <div class="learning-objectives">
+                        <h3>🎯 Learning Objectives</h3>
+                        <ul>
+                            <li>Analyze algorithm efficiency using Big O notation</li>
+                            <li>Understand P, NP, and NP-complete problems</li>
+                            <li>Design and implement fundamental algorithms</li>
+                            <li>Apply algorithmic thinking to real-world problems</li>
+                            <li>Master complexity analysis techniques</li>
+                        </ul>
+                    </div>
+
+                    <div class="prerequisites">
+                        <h3>📋 Prerequisites</h3>
+                        <ul>
+                            <li>Discrete Mathematics</li>
+                            <li>Basic programming concepts</li>
+                            <li>Mathematical reasoning</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-sidebar">
+                    <div class="card">
+                        <h4>Course Structure</h4>
+                        <ul class="course-structure">
+                            <li><a href="#analysis">Algorithm Analysis</a></li>
+                            <li><a href="#complexity">Complexity Theory</a></li>
+                            <li><a href="#algorithms">Classic Algorithms</a></li>
+                            <li><a href="#optimization">Optimization</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4>Key Concepts</h4>
+                        <div class="concept-tags">
+                            <span class="tag">Big O</span>
+                            <span class="tag">NP-Complete</span>
+                            <span class="tag">Greedy Algorithms</span>
+                            <span class="tag">Dynamic Programming</span>
+                            <span class="tag">Graph Algorithms</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analysis Section -->
+    <section id="analysis" class="topics-section">
+        <div class="container">
+            <h2>Algorithm Analysis</h2>
+
+            <div class="analysis-grid">
+                <div class="analysis-card">
+                    <h3>Asymptotic Notation</h3>
+                    <div class="notation-examples">
+                        <div class="notation-item">
+                            <h4>Big O (O)</h4>
+                            <p>Upper bound: \( f(n) = O(g(n)) \)</p>
+                            <p class="example">Example: \( 3n^2 + 2n + 1 = O(n^2) \)</p>
+                        </div>
+                        <div class="notation-item">
+                            <h4>Big Ω (Ω)</h4>
+                            <p>Lower bound: \( f(n) = \Omega(g(n)) \)</p>
+                            <p class="example">Example: \( n^2 + 3n = \Omega(n^2) \)</p>
+                        </div>
+                        <div class="notation-item">
+                            <h4>Big Θ (Θ)</h4>
+                            <p>Tight bound: \( f(n) = \Theta(g(n)) \)</p>
+                            <p class="example">Example: \( 2n^2 + n = \Theta(n^2) \)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analysis-card">
+                    <h3>Common Complexities</h3>
+                    <table class="complexity-table">
+                        <thead>
+                            <tr>
+                                <th>Complexity</th>
+                                <th>Name</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>\( O(1) \)</td>
+                                <td>Constant</td>
+                                <td>Array access</td>
+                            </tr>
+                            <tr>
+                                <td>\( O(\log n) \)</td>
+                                <td>Logarithmic</td>
+                                <td>Binary search</td>
+                            </tr>
+                            <tr>
+                                <td>\( O(n) \)</td>
+                                <td>Linear</td>
+                                <td>Linear search</td>
+                            </tr>
+                            <tr>
+                                <td>\( O(n \log n) \)</td>
+                                <td>Linearithmic</td>
+                                <td>Quick sort</td>
+                            </tr>
+                            <tr>
+                                <td>\( O(n^2) \)</td>
+                                <td>Quadratic</td>
+                                <td>Bubble sort</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Complexity Section -->
+    <section id="complexity" class="content-section">
+        <div class="container">
+            <h2>Complexity Theory</h2>
+
+            <div class="complexity-classes">
+                <div class="complexity-class">
+                    <div class="class-header">
+                        <h3>P (Polynomial Time)</h3>
+                        <span class="class-badge">P</span>
+                    </div>
+                    <p>Problems solvable in polynomial time by a deterministic algorithm.</p>
+                    <div class="class-examples">
+                        <span>Sorting</span>
+                        <span>Shortest Path</span>
+                        <span>Linear Programming</span>
+                    </div>
+                </div>
+
+                <div class="complexity-class">
+                    <div class="class-header">
+                        <h3>NP (Nondeterministic Polynomial)</h3>
+                        <span class="class-badge">NP</span>
+                    </div>
+                    <p>Problems where solutions can be verified in polynomial time.</p>
+                    <div class="class-examples">
+                        <span>Traveling Salesman</span>
+                        <span>Boolean Satisfiability</span>
+                        <span>Graph Coloring</span>
+                    </div>
+                </div>
+
+                <div class="complexity-class">
+                    <div class="class-header">
+                        <h3>NP-Complete</h3>
+                        <span class="class-badge">NPC</span>
+                    </div>
+                    <p>Hardest problems in NP - if any is in P, then P = NP.</p>
+                    <div class="class-examples">
+                        <span>Hamiltonian Cycle</span>
+                        <span>Knapsack Problem</span>
+                        <span>Subset Sum</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Algorithms Section -->
+    <section id="algorithms" class="topics-section">
+        <div class="container">
+            <h2>Classic Algorithms</h2>
+
+            <div class="algorithms-grid">
+                <div class="algorithm-card">
+                    <div class="algorithm-header">
+                        <h3>Sorting Algorithms</h3>
+                        <span class="algorithm-complexity">O(n log n)</span>
+                    </div>
+                    <ul>
+                        <li><strong>Quick Sort:</strong> Divide and conquer, average O(n log n)</li>
+                        <li><strong>Merge Sort:</strong> Stable sort, guaranteed O(n log n)</li>
+                        <li><strong>Heap Sort:</strong> In-place, O(n log n) worst case</li>
+                    </ul>
+                </div>
+
+                <div class="algorithm-card">
+                    <div class="algorithm-header">
+                        <h3>Graph Algorithms</h3>
+                        <span class="algorithm-complexity">Varies</span>
+                    </div>
+                    <ul>
+                        <li><strong>Dijkstra:</strong> Shortest path, O((V+E) log V)</li>
+                        <li><strong>Bellman-Ford:</strong> Negative edges, O(VE)</li>
+                        <li><strong>Floyd-Warshall:</strong> All pairs, O(V³)</li>
+                    </ul>
+                </div>
+
+                <div class="algorithm-card">
+                    <div class="algorithm-header">
+                        <h3>Dynamic Programming</h3>
+                        <span class="algorithm-complexity">Varies</span>
+                    </div>
+                    <ul>
+                        <li><strong>Fibonacci:</strong> Memoization vs tabulation</li>
+                        <li><strong>Knapsack:</strong> 0/1 and unbounded variants</li>
+                        <li><strong>LCS:</strong> Longest common subsequence</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Software Engineering Mathematics</h4>
+                    <p>A comprehensive mathematics curriculum for software engineering students.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#analysis">Analysis</a></li>
+                        <li><a href="#complexity">Complexity</a></li>
+                        <li><a href="#algorithms">Algorithms</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">All Courses</a></li>
+                        <li><a href="#">Practice Problems</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Software Engineering Mathematics. Built with ❤️ for the software engineering community.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Puppertino JavaScript -->
+    <script src="https://cdn.jsdelivr.net/gh/codedgar/Puppertino@latest/dist/js/darkmode_manager.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/codedgar/Puppertino@latest/dist/js/modals.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/codedgar/Puppertino@latest/dist/js/tabs.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="../js/main.js"></script>
+</body>
+</html>
