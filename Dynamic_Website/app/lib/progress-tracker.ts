@@ -15,16 +15,42 @@ interface ProgressData {
   [moduleId: string]: ModuleProgress;
 }
 
+// Safe localStorage access with error handling
+function getLocalStorageItem(key: string): string | null {
+  if (typeof window === 'undefined') return null;
+  try {
+    return localStorage.getItem(key);
+  } catch (error) {
+    console.warn('localStorage access failed:', error);
+    return null;
+  }
+}
+
+function setLocalStorageItem(key: string, value: string): boolean {
+  if (typeof window === 'undefined') return false;
+  try {
+    localStorage.setItem(key, value);
+    return true;
+  } catch (error) {
+    console.warn('localStorage write failed:', error);
+    return false;
+  }
+}
+
 export function useModuleProgress(moduleId: string, lessonId: string) {
   const [progress, setProgress] = useState<LessonProgress>({ completed: false });
 
   // Load progress from localStorage
   useEffect(() => {
-    const stored = localStorage.getItem(`module-progress-${moduleId}`);
+    const stored = getLocalStorageItem(`module-progress-${moduleId}`);
     if (stored) {
-      const data: ModuleProgress = JSON.parse(stored);
-      if (data[lessonId]) {
-        setProgress(data[lessonId]);
+      try {
+        const data: ModuleProgress = JSON.parse(stored);
+        if (data[lessonId]) {
+          setProgress(data[lessonId]);
+        }
+      } catch (error) {
+        console.warn('Failed to parse progress data:', error);
       }
     }
   }, [moduleId, lessonId]);
@@ -39,10 +65,14 @@ export function useModuleProgress(moduleId: string, lessonId: string) {
     setProgress(newProgress);
 
     // Save to localStorage
-    const stored = localStorage.getItem(`module-progress-${moduleId}`) || '{}';
-    const data: ModuleProgress = JSON.parse(stored);
-    data[lessonId] = newProgress;
-    localStorage.setItem(`module-progress-${moduleId}`, JSON.stringify(data));
+    const stored = getLocalStorageItem(`module-progress-${moduleId}`) || '{}';
+    try {
+      const data: ModuleProgress = JSON.parse(stored);
+      data[lessonId] = newProgress;
+      setLocalStorageItem(`module-progress-${moduleId}`, JSON.stringify(data));
+    } catch (error) {
+      console.warn('Failed to save progress:', error);
+    }
   };
 
   return { progress, markComplete };
@@ -52,11 +82,15 @@ export function useModuleProgressOverview(moduleId: string, totalLessons: number
   const [completed, setCompleted] = useState(0);
 
   useEffect(() => {
-    const stored = localStorage.getItem(`module-progress-${moduleId}`);
+    const stored = getLocalStorageItem(`module-progress-${moduleId}`);
     if (stored) {
-      const data: ModuleProgress = JSON.parse(stored);
-      const completedCount = Object.values(data).filter(p => p.completed).length;
-      setCompleted(completedCount);
+      try {
+        const data: ModuleProgress = JSON.parse(stored);
+        const completedCount = Object.values(data).filter(p => p.completed).length;
+        setCompleted(completedCount);
+      } catch (error) {
+        console.warn('Failed to parse progress overview:', error);
+      }
     }
   }, [moduleId]);
 

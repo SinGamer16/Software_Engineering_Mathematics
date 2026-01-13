@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { lessonContent } from "./content";
+import { getModule } from "../../modules";
 import PracticeProblems from "@/app/learn/components/PracticeProblems";
+import MarkCompleteButton from "@/app/learn/components/MarkCompleteButton";
+import Navigation from "@/app/components/Navigation";
+import LessonNavigation from "@/app/learn/components/LessonNavigation";
 
 interface PageProps {
   params: Promise<{ moduleId: string; lessonId: string }>;
@@ -18,29 +22,11 @@ export default async function LessonPage({ params }: PageProps) {
 
   const lesson = lessonContent[contentKey];
   const problems = lesson.practiceProblems || [];
+  const module = getModule(moduleId);
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navigation */}
-      <nav className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16">
-            <div className="flex items-center">
-              <Link href="/" className="text-xl font-bold text-gray-900">
-                Software Engineering Mathematics
-              </Link>
-            </div>
-            <div className="flex items-center space-x-4">
-              <Link href="/learn" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
-                Learning Path
-              </Link>
-              <Link href={`/learn/${moduleId}`} className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
-                ← Back to Module
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation showBackToModule={true} moduleId={moduleId} />
 
       {/* Lesson Header */}
       <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-12">
@@ -91,25 +77,16 @@ export default async function LessonPage({ params }: PageProps) {
 
         {/* Navigation Footer */}
         <footer className="mt-12 pt-8 border-t border-gray-200">
-          <div className="flex justify-between items-center">
-            <Link
-              href={`/learn/${moduleId}`}
-              className="text-gray-600 hover:text-gray-900 font-medium"
-            >
-              ← Back to Module
-            </Link>
-            <div className="flex space-x-4">
-              <button className="bg-green-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-green-700 transition-colors">
-                Mark as Complete
-              </button>
-              <Link
-                href={`/learn/${moduleId}`}
-                className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors"
-              >
-                Next Lesson →
-              </Link>
-            </div>
+          <div className="flex justify-between items-center mb-4">
+            <MarkCompleteButton moduleId={moduleId} lessonId={lessonId} />
           </div>
+          {module && (
+            <LessonNavigation 
+              moduleId={moduleId} 
+              currentLessonId={lessonId} 
+              lessons={module.lessons} 
+            />
+          )}
         </footer>
       </main>
     </div>

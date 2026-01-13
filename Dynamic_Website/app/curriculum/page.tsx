@@ -1,6 +1,13 @@
 import Link from "next/link";
+import Navigation from "@/app/components/Navigation";
+import ModuleCard from "@/app/components/ModuleCard";
+import { allModules, getModulesBySection } from "@/app/lib/module-data";
 
 export default function Curriculum() {
+  const notationModules = getModulesBySection("Mathematical Notation");
+  const coreModules = getModulesBySection("Core Mathematical Foundations");
+  const csModules = getModulesBySection("Computer Science Mathematics");
+  
   const curriculumStructure = [
     {
       section: "Mathematical Notation",
@@ -205,8 +212,14 @@ export default function Curriculum() {
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {section.modules.map((module, moduleIndex) => (
-                  <ModuleCard key={moduleIndex} module={module} />
+                {section.section === "Mathematical Notation" && notationModules.map((module) => (
+                  <ModuleCard key={module.id} module={module} />
+                ))}
+                {section.section === "Core Mathematical Foundations" && coreModules.map((module) => (
+                  <ModuleCard key={module.id} module={module} />
+                ))}
+                {section.section === "Computer Science Mathematics" && csModules.map((module) => (
+                  <ModuleCard key={module.id} module={module} />
                 ))}
               </div>
             </div>
@@ -219,11 +232,13 @@ export default function Curriculum() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">8</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">{allModules.length}</div>
               <p className="text-gray-600">Modules Available</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">32</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">
+                {allModules.reduce((sum, m) => sum + m.lessons, 0)}
+              </div>
               <p className="text-gray-600">Total Lessons</p>
             </div>
             <div className="text-center">
@@ -296,57 +311,6 @@ export default function Curriculum() {
           </Link>
         </div>
       </section>
-    </div>
-  );
-}
-
-// Module Card Component
-function ModuleCard({ module }: { module: any }) {
-  const isAvailable = module.status === "available";
-
-  return (
-    <div className={`rounded-lg border p-6 transition-all ${
-      isAvailable 
-        ? 'bg-white border-gray-200 hover:shadow-md' 
-        : 'bg-gray-50 border-gray-200 opacity-75'
-    }`}>
-      <div className="flex items-start justify-between mb-4">
-        <div className="text-4xl">{module.icon}</div>
-        <div>
-          {isAvailable ? (
-            <span className="inline-flex items-center gap-1 px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">
-              <div className="w-2 h-2 rounded-full bg-green-600"></div>
-              Available
-            </span>
-          ) : (
-            <span className="inline-flex items-center gap-1 px-2 py-1 bg-gray-200 text-gray-700 text-xs font-medium rounded-full">
-              <div className="w-2 h-2 rounded-full bg-gray-500"></div>
-              Coming Soon
-            </span>
-          )}
-        </div>
-      </div>
-
-      <h3 className="text-xl font-semibold text-gray-900 mb-2">{module.name}</h3>
-      <p className="text-gray-600 mb-4 text-sm">{module.description}</p>
-
-      <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-        <span>📚 {module.lessons} lessons</span>
-        <span>⏱️ {module.duration}</span>
-      </div>
-
-      {isAvailable ? (
-        <Link
-          href={`/learn/${module.id}`}
-          className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors text-center block"
-        >
-          Start Module
-        </Link>
-      ) : (
-        <button className="w-full bg-gray-200 text-gray-600 py-2 px-4 rounded-lg font-medium cursor-not-allowed">
-          Coming Soon
-        </button>
-      )}
     </div>
   );
 }

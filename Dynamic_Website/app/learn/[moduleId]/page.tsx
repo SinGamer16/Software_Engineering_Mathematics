@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getModule } from "../modules";
+import Navigation from "@/app/components/Navigation";
+import LessonList from "@/app/learn/components/LessonList";
+import ModuleProgress from "@/app/learn/components/ModuleProgress";
 
 interface PageProps {
   params: Promise<{ moduleId: string }>;
@@ -14,8 +17,6 @@ export default async function ModulePage({ params }: PageProps) {
     notFound();
   }
 
-  const completedLessons = module.lessons.filter(lesson => lesson.completed).length;
-  const progressPercentage = Math.round((completedLessons / module.lessons.length) * 100);
 
   const colorMap = {
     blue: 'from-blue-600 to-indigo-700',
@@ -38,23 +39,7 @@ export default async function ModulePage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navigation */}
-      <nav className="bg-white shadow-sm border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16">
-            <div className="flex items-center">
-              <Link href="/" className="text-xl font-bold text-gray-900">
-                Software Engineering Mathematics
-              </Link>
-            </div>
-            <div className="flex items-center space-x-4">
-              <Link href="/learn" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
-                ← Back to Learning Path
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation showBackToLearningPath={true} />
 
       {/* Module Header */}
       <section className={`bg-gradient-to-r ${gradientClass} text-white py-16`}>
@@ -70,18 +55,7 @@ export default async function ModulePage({ params }: PageProps) {
           </div>
 
           {/* Progress Bar */}
-          <div className="max-w-md">
-            <div className="flex justify-between text-sm mb-2">
-              <span>Progress</span>
-              <span>{completedLessons} of {module.lessons.length} lessons ({progressPercentage}%)</span>
-            </div>
-            <div className="bg-white bg-opacity-20 rounded-full h-3">
-              <div
-                className="bg-white h-3 rounded-full transition-all duration-300"
-                style={{ width: `${progressPercentage}%` }}
-              ></div>
-            </div>
-          </div>
+          <ModuleProgress moduleId={moduleId} totalLessons={module.lessons.length} />
         </div>
       </section>
 
@@ -90,40 +64,7 @@ export default async function ModulePage({ params }: PageProps) {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Lessons</h2>
 
-          <div className="space-y-4">
-            {module.lessons.map((lesson, index) => (
-              <div key={lesson.id} className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center">
-                    <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium mr-4 ${
-                      lesson.completed
-                        ? 'bg-green-100 text-green-800'
-                        : 'bg-gray-100 text-gray-600'
-                    }`}>
-                      {lesson.completed ? '✓' : index + 1}
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900">{lesson.title}</h3>
-                      <p className="text-gray-600">{lesson.description}</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <span className="text-sm text-gray-500">{lesson.duration}</span>
-                    <Link
-                      href={`/learn/${moduleId}/${lesson.id}`}
-                      className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                        lesson.completed
-                          ? 'bg-green-100 text-green-800 hover:bg-green-200'
-                          : 'bg-blue-600 text-white hover:bg-blue-700'
-                      }`}
-                    >
-                      {lesson.completed ? 'Review' : 'Start'}
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <LessonList moduleId={moduleId} lessons={module.lessons} />
         </div>
       </section>
 
